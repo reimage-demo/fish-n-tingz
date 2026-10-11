@@ -16,28 +16,40 @@
     <style>
       :root { color-scheme: light; --green: #259d0a; --deep-green: #176b0b; --red: #c91520; --ink: #182016; }
       * { box-sizing: border-box; }
-      body { margin: 0; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; background: #fff; color: var(--ink); font: 16px/1.5 Arial, Helvetica, sans-serif; border-top: 6px solid var(--green); }
+      body { margin: 0; min-height: 100vh; min-height: 100svh; display: grid; place-items: center; padding: 12px 20px; background: #fff; color: var(--ink); font: 16px/1.5 Arial, Helvetica, sans-serif; border-top: 6px solid var(--green); }
       a { color: inherit; }
       a, summary { -webkit-tap-highlight-color: transparent; }
       :focus-visible { outline: 3px solid var(--ink); outline-offset: 5px; }
-      main { width: min(100% - 48px, 400px); margin: auto; padding: 42px 0 32px; text-align: center; }
-      .logo { display: block; width: 248px; max-width: 75%; margin: 0 auto 32px; }
+      main { width: min(100%, 360px); text-align: center; }
+      .logo { display: block; width: clamp(100px, 22svh, 180px); max-width: 65%; margin: 0 auto 18px; }
       .logo img { display: block; width: 100%; height: auto; }
       .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-      .links { display: grid; gap: 12px; }
-      .link-button { display: block; width: 100%; min-height: 56px; padding: 15px 20px; border: 1px solid var(--deep-green); border-radius: 999px; background: var(--deep-green); color: #fff; font-size: 16px; font-weight: 700; text-align: center; text-decoration: none; cursor: pointer; }
+      .links { display: grid; gap: 8px; }
+      .link-button { display: block; width: 100%; min-height: 48px; padding: 11px 20px; border: 1px solid var(--deep-green); border-radius: 999px; background: var(--deep-green); color: #fff; font-size: 16px; font-weight: 700; text-align: center; text-decoration: none; cursor: pointer; }
       .link-button:hover { background: #125307; border-color: #125307; }
       .reserve { background: var(--red); border-color: var(--red); }
       .reserve:hover { background: #a91019; border-color: #a91019; }
       summary { list-style: none; }
       summary::-webkit-details-marker { display: none; }
       details[open] summary { background: #fff; color: var(--deep-green); }
-      .social-links { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 12px; }
-      .social-links a { padding: 12px 4px; min-height: 48px; border: 1px solid #d7dccf; border-radius: 999px; background: #f4f5f0; color: var(--deep-green); text-decoration: none; font-size: 14px; font-weight: 700; }
-      footer { padding: 24px 20px max(24px, env(safe-area-inset-bottom)); text-align: center; font-size: 12px; color: #596052; }
-      footer a { margin-left: 4px; color: var(--deep-green); font-weight: 700; text-decoration: none; }
+      .social-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding-top: 8px; }
+      .social-links a { display: flex; align-items: center; justify-content: center; padding: 8px 4px; min-height: 44px; border: 1px solid #d7dccf; border-radius: 999px; background: #f4f5f0; color: var(--deep-green); text-decoration: none; font-size: 14px; font-weight: 700; }
+      footer { margin-top: 14px; font-size: 12px; color: #596052; }
+      .contact { margin: 0; font-style: normal; font-size: 13px; line-height: 18px; }
+      .contact a { display: block; width: fit-content; margin-inline: auto; color: var(--ink); text-decoration: none; }
+      .contact .phone { padding-block: 7px; font-weight: 700; }
+      .powered-by { margin: 4px 0 0; font-size: 11px; line-height: 16px; }
+      .powered-by a { display: block; color: var(--deep-green); font-weight: 700; text-decoration: none; }
       footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
-      @media (max-height: 650px) { main { padding-top: 24px; } .logo { width: 180px; margin-bottom: 24px; } }
+      @media (max-height: 650px) {
+        body { padding-block: 8px; }
+        .logo { width: 100px; margin-bottom: 12px; }
+        .links { gap: 6px; }
+        .link-button { min-height: 44px; padding-block: 9px; font-size: 15px; }
+        footer { margin-top: 10px; }
+        .contact { font-size: 12px; line-height: 16px; }
+        .contact .phone { padding-block: 6px; }
+      }
     </style>
   </head>
   <body>
@@ -58,7 +70,13 @@
           </div>
         </details>
       </nav>
+      <footer>
+        <address class="contact">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=384%20Middle%20Turnpike%20W%2C%20Manchester%2C%20CT%2006040" target="_blank" rel="noopener noreferrer">384 Middle Turnpike W<br>Manchester, CT 06040<span class="sr-only"> (opens map in a new tab)</span></a>
+          <a class="phone" href="tel:+18607304440">(860) 730-4440</a>
+        </address>
+        <p class="powered-by">Powered by <a href="https://reimagebs.com" target="_blank" rel="noopener noreferrer">REIMAGE BUSINESS SOLUTIONS<span class="sr-only"> (opens in a new tab)</span></a></p>
+      </footer>
     </main>
-    <footer>Powered by <a href="https://reimagebs.com" target="_blank" rel="noopener noreferrer">RE IMAGE<span class="sr-only"> (opens in a new tab)</span></a></footer>
   </body>
 </html>
