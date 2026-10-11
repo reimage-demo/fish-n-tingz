@@ -981,13 +981,16 @@ body:has(dialog[open]) {
   margin-bottom: 18px;
 }
 .reservation-section input,
+.reservation-section select,
 .reservation-section textarea {
   display: block;
   width: 100%;
   min-width: 0;
-  padding: 11px;
-  border: 1px solid #89947d;
-  border-radius: 2px;
+  padding: 12px 14px;
+  min-height: 48px;
+  font-size: 16px;
+  border: 1px solid #a8b29f;
+  border-radius: 6px;
   margin-top: 6px;
   background: white;
   color: var(--ink);
@@ -1020,6 +1023,34 @@ body:has(dialog[open]) {
 }
 #reservation-status.error {
   border-color: var(--red);
+}
+.reservation-section > .reservation-flow { max-width: none; }
+.reservation-flow fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.reservation-flow [hidden] { display: none; }
+.reservation-schedule { gap: 16px; }
+.reservation-schedule label { margin-bottom: 0; }
+.reservation-schedule select { font-weight: 600; cursor: pointer; }
+.date-shortcuts { display: flex; gap: 8px; margin-top: 8px; }
+.date-shortcuts button { border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink); padding: 7px 14px; min-height: 36px; font-size: 12px; font-weight: 700; }
+.date-shortcuts button[aria-pressed="true"] { background: #176b0b; border-color: #176b0b; color: white; }
+.date-shortcuts button:hover { border-color: #176b0b; }
+.reservation-helper { font-size: 12px; color: var(--muted); margin: 12px 0; }
+.reservation-selection { margin: 0 0 22px; padding: 12px 0; border-block: 1px solid var(--line); font-size: 14px; font-weight: 700; }
+.reservation-flow [aria-invalid="true"] { border-color: var(--red); background: #fff6f5; }
+.reservation-flow fieldset:disabled { opacity: .65; }
+.reservation-submit { min-width: 190px; }
+.reservation-confirmation { border-top: 4px solid #176b0b; background: var(--soft); padding: 28px; }
+.confirmation-state { font-size: 13px; color: #176b0b; font-weight: 700; margin-bottom: 14px; }
+.reservation-confirmation h3 { font-size: 38px; }
+.confirmation-details { margin: 24px 0; }
+.confirmation-details > div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 12px 0; border-block-end: 1px solid var(--line); font-size: 14px; }
+.confirmation-details dt { color: var(--muted); }
+.confirmation-details dd { margin: 0; font-weight: 700; overflow-wrap: anywhere; }
+.confirmation-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+@media (max-width: 480px) {
+  .reservation-schedule { grid-template-columns: 1fr; }
+  .reservation-confirmation { padding: 22px 18px; }
+  .confirmation-details > div { grid-template-columns: 1fr; gap: 4px; }
 }
 
 @media (max-width: 1050px) {
