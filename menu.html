@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#24613d" />
+    <meta
+      name="description"
+      content="Browse the full Fish N Tingz menu: appetizers, dinner, Sunday brunch, signature drinks, and drinks for the table. Order through Toast."
+    />
+    <title>Food, drinks & all the tingz | Fish N Tingz Bar & Grill</title>
+    <link rel="icon" href="assets/brand/logo.webp" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="menu">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Fish N Tingz home"
+        ><img
+          src="assets/brand/logo.webp"
+          width="110"
+          height="88"
+          alt="Fish N Tingz Bar and Grill" /></a
+      ><button
+        class="nav-toggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        Menu <span aria-hidden="true">☰</span>
+      </button>
+      <nav id="main-navigation" aria-label="Main navigation">
+        <a href="index.html" data-nav="home">Home</a
+        ><a href="menu.html" data-nav="menu">Our menu</a
+        ><a href="events.html" data-nav="events">Events & gatherings</a
+        ><a href="contact.html" data-nav="contact">Visit us</a>
+      </nav>
+      <a
+        class="button compact order-link"
+        href="https://www.toasttab.com/fishntingzbarandgrill/v3/"
+        target="_blank"
+        rel="noopener"
+        >Order online <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main id="main">
+      <section class="page-heading wrap">
+        <p class="eyebrow">From our kitchen & behind the bar</p>
+        <h1>Food, drinks.<br /><span>All the tingz.</span></h1>
+        <div class="page-intro">
+          <p>
+            A little heat. A lot of heart. Find your favorite, pick your
+            sides,<br class="desktop" />
+            and let us take care of dinner.
+          </p>
+          <a
+            class="button order-link"
+            href="https://www.toasttab.com/fishntingzbarandgrill/v3/"
+            target="_blank"
+            rel="noopener"
+            >Order on Toast ↗</a
+          >
+        </div>
+      </section>
+      <div class="menu-tools wrap">
+        <div class="tabs" role="group" aria-label="Menu type">
+          <button data-kind="all" class="selected" aria-pressed="true">
+            Everything</button
+          ><button data-kind="food" aria-pressed="false">Food</button
+          ><button data-kind="drinks" aria-pressed="false">Drinks</button>
+        </div>
+        <label class="search"
+          ><span class="sr-only">Search the menu</span
+          ><input
+            id="menu-search"
+            type="search"
+            placeholder="Find your favorite…" /></label
+        ><button class="picks-button" id="open-picks">
+          Your picks <span id="picks-count">0</span>
+        </button>
+      </div>
+      <div class="menu-layout wrap">
+        <nav
+          id="category-nav"
+          class="category-nav"
+          aria-label="Menu categories"
+        ></nav>
+        <div>
+          <p class="menu-note">
+            Sunday brunch: 12–6 PM. Prices and availability are confirmed at
+            checkout. Cocktails and towers are subject to dine-in availability.
+          </p>
+          <div id="menu-content"></div>
+          <p class="small menu-footnote">
+            Please tell your server about allergies. Consuming raw or
+            undercooked meats, poultry, seafood, shellfish, or eggs may increase
+            your risk of foodborne illness.
+          </p>
+        </div>
+      </div>
+      <dialog id="item-dialog" aria-labelledby="item-title">
+        <button class="dialog-close" aria-label="Close item">×</button>
+        <div id="item-detail"></div>
+      </dialog>
+      <dialog id="picks-dialog" aria-labelledby="picks-title">
+        <button class="dialog-close" aria-label="Close your picks">×</button>
+        <p class="eyebrow">Something good is on the way</p>
+        <h2 id="picks-title">Your picks.</h2>
+        <div id="picks-items"></div>
+        <div id="picks-summary"></div>
+        <p class="small">
+          This is your saved menu list. Choose your items again on Toast to
+          place and pay for your order. Prices, tax, and availability are
+          confirmed there.
+        </p>
+        <a
+          class="button order-link"
+          href="https://www.toasttab.com/fishntingzbarandgrill/v3/"
+          target="_blank"
+          rel="noopener"
+          >Continue to Toast ↗</a
+        >
+      </dialog>
+    </main>
+    <footer>
+      <div class="footer-top">
+        <a href="index.html" class="footer-logo"
+          ><img
+            src="assets/brand/logo.webp"
+            width="130"
+            height="100"
+            alt="Fish N Tingz"
+          /><span>A taste of home.<br />A place for everyone.</span></a
+        >
+        <div>
+          <p class="eyebrow">Find your way</p>
+          <a href="menu.html">Food & drinks</a
+          ><a href="events.html">Events & gatherings</a
+          ><a href="contact.html">Visit us</a>
+        </div>
+        <div>
+          <p class="eyebrow">Come through</p>
+          <a
+            class="address-link"
+            href="https://www.google.com/maps/search/?api=1&query=Fish+N+Tingz+Manchester+CT"
+            target="_blank"
+            rel="noopener"
+            >384 Middle Turnpike W<br />Manchester, CT 06040</a
+          ><a class="phone-link" href="tel:+18607304440">(860) 730-4440</a>
+        </div>
+        <div>
+          <p class="eyebrow">Stay in the loop</p>
+          <a
+            href="https://www.instagram.com/fishntingz01/"
+            target="_blank"
+            rel="noopener"
+            >Instagram ↗</a
+          ><a
+            href="https://www.facebook.com/fishntingz01"
+            target="_blank"
+            rel="noopener"
+            >Facebook ↗</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Fish N Tingz Bar & Grill</span
+        ><span>Authentic West Indian food. Manchester, Connecticut.</span>
+      </div>
+    </footer>
+    <dialog id="booking-dialog" aria-labelledby="booking-title">
+      <button class="dialog-close" aria-label="Close dialog">×</button>
+      <p class="eyebrow">Make it a gathering</p>
+      <h2 id="booking-title">Your people.<br />Our place.</h2>
+      <p>
+        Planning a birthday, a brunch, or a reason to get everyone together?
+        Call us to talk dates, food, and the space.
+      </p>
+      <a class="button phone-link" href="tel:+18607304440"
+        >Call (860) 730-4440 ↗</a
+      >
+      <p class="small">Online space booking will be available here soon.</p>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="public-config.js"></script>
+    <script type="module" src="shared.js"></script>
+  </body>
+</html>
