@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#259d0a" />
+    <title>Fish N Tingz | Home, Reservations &amp; Orders</title>
+    <meta name="description" content="Your way to Fish N Tingz Bar & Grill. Visit our website, reserve a table, order online, or follow us on social media." />
+    <link rel="canonical" href="https://reimage-demo.github.io/fish-n-tingz/landing-page.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fish N Tingz Bar & Grill" />
+    <meta property="og:description" content="Reserve a table, order your favorites, and stay in the loop." />
+    <meta property="og:url" content="https://reimage-demo.github.io/fish-n-tingz/landing-page.html" />
+    <meta property="og:image" content="https://reimage-demo.github.io/fish-n-tingz/assets/brand/logo.webp" />
+    <link rel="icon" href="assets/brand/logo.webp" />
+    <style>
+      :root { color-scheme: light; --green: #259d0a; --deep-green: #176b0b; --red: #c91520; --ink: #182016; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; background: #fff; color: var(--ink); font: 16px/1.5 Arial, Helvetica, sans-serif; border-top: 6px solid var(--green); }
+      a { color: inherit; }
+      a, summary { -webkit-tap-highlight-color: transparent; }
+      :focus-visible { outline: 3px solid var(--ink); outline-offset: 5px; }
+      main { width: min(100% - 48px, 400px); margin: auto; padding: 42px 0 32px; text-align: center; }
+      .logo { display: block; width: 248px; max-width: 75%; margin: 0 auto 32px; }
+      .logo img { display: block; width: 100%; height: auto; }
+      .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+      .links { display: grid; gap: 12px; }
+      .link-button { display: block; width: 100%; min-height: 56px; padding: 15px 20px; border: 1px solid var(--deep-green); border-radius: 3px; background: var(--deep-green); color: #fff; font-size: 16px; font-weight: 700; text-align: center; text-decoration: none; cursor: pointer; }
+      .link-button:hover { background: #125307; border-color: #125307; }
+      .reserve { background: var(--red); border-color: var(--red); }
+      .reserve:hover { background: #a91019; border-color: #a91019; }
+      summary { list-style: none; }
+      summary::-webkit-details-marker { display: none; }
+      details[open] summary { background: #fff; color: var(--deep-green); }
+      .social-links { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 12px; }
+      .social-links a { padding: 12px 4px; min-height: 48px; border-bottom: 1px solid var(--green); color: var(--deep-green); text-underline-offset: 4px; font-size: 14px; }
+      footer { padding: 24px 20px max(24px, env(safe-area-inset-bottom)); text-align: center; font-size: 12px; color: #596052; }
+      footer a { margin-left: 4px; color: var(--deep-green); font-weight: 700; text-decoration: none; }
+      footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      @media (max-height: 650px) { main { padding-top: 24px; } .logo { width: 180px; margin-bottom: 24px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="sr-only">Fish N Tingz Bar &amp; Grill</h1>
+      <a class="logo" href="index.html" aria-label="Fish N Tingz home">
+        <img src="assets/brand/logo.webp" alt="Fish N Tingz Bar and Grill" width="360" height="260" fetchpriority="high" />
+      </a>
+      <nav class="links" aria-label="Fish N Tingz quick links">
+        <a class="link-button" href="index.html">Home</a>
+        <a class="link-button reserve" href="contact.html#reservations">Reserve a table</a>
+        <a class="link-button" href="https://www.toasttab.com/fishntingzbarandgrill/v3/" target="_blank" rel="noopener noreferrer">Order online<span class="sr-only"> on Toast (opens in a new tab)</span></a>
+        <details>
+          <summary class="link-button">Social media</summary>
+          <div class="social-links">
+            <a href="https://www.instagram.com/fishntingz01/" target="_blank" rel="noopener noreferrer">Instagram<span class="sr-only"> (opens in a new tab)</span></a>
+            <a href="https://www.facebook.com/fishntingz01" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </details>
+      </nav>
+    </main>
+    <footer>Powered by <a href="https://reimagebs.com" target="_blank" rel="noopener noreferrer">RE IMAGE<span class="sr-only"> (opens in a new tab)</span></a></footer>
+  </body>
+</html>
