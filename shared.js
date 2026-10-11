@@ -1,3 +1,4 @@
+import { setupReservationForm } from "./reservation-form.js";
 import {
   menu as initialMenu,
   events as initialEvents,
@@ -320,52 +321,11 @@ if (window.FNT_CONFIG?.convexUrl) {
 
 const reservationForm = $("#reservation-form");
 if (reservationForm) {
-  const easternDate = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "America/New_York",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).format(new Date());
-  reservationForm.elements.date.min = easternDate;
-  let requestKey = crypto.randomUUID();
-  let busy = false;
-  reservationForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    if (busy) return;
-    const status = $("#reservation-status"),
-      button = reservationForm.querySelector('button[type="submit"]');
-    const fields = Object.fromEntries(new FormData(reservationForm));
-    busy = true;
-    button.disabled = true;
-    button.textContent = "Sending request…";
-    status.textContent = "";
-    try {
-      if (!client)
-        throw new Error(
-          "Reservations are temporarily unavailable. Please call us.",
-        );
-      const result = await client.mutation(anyApi.reservations.request, {
-        ...fields,
-        party: Number(fields.party),
-        requestKey,
-      });
-      status.textContent = `Request received. Reference ${result.reference}. Your table is pending confirmation; our team will contact you by phone. To change your request, call ${settings.phone}.`;
-      status.className = "success";
-      reservationForm.reset();
-      requestKey = crypto.randomUUID();
-    } catch (error) {
-      status.className = "error";
-      status.textContent =
-        typeof error.data === "string"
-          ? error.data
-          : "We couldn’t send your request. Please try again, or call " +
-            settings.phone +
-            ".";
-    } finally {
-      busy = false;
-      button.disabled = false;
-      button.textContent = "Request a table";
-      status.focus();
-    }
+  setupReservationForm(reservationForm, {
+    getPhone: () => settings.phone,
+    submitRequest: (fields) => {
+      if (!client) throw new Error("Reservations are temporarily unavailable. Please call us.");
+      return client.mutation(anyApi.reservations.request, fields);
+    },
   });
 }

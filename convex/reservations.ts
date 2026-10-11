@@ -71,12 +71,12 @@ export const request = mutation({
       !/^\d{4}-\d{2}-\d{2}$/.test(input.date) ||
       !Number.isFinite(parsed) ||
       new Date(parsed).toISOString().slice(0, 10) !== input.date ||
-      !/^([01]\d|2[0-3]):[0-5]\d$/.test(input.time) ||
+      !/^([01]\d|2[0-3]):(00|30)$/.test(input.time) ||
       input.date + "T" + input.time <= localNow ||
       parsed > now + 180 * 86400000
     )
       throw new ConvexError(
-        "Choose a future date and time within the next six months (Eastern Time).",
+        "Choose a future date within the next six months and a time on the hour or half-hour (Eastern Time).",
       );
     const recent = await ctx.db
       .query("reservations")
