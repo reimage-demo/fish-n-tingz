@@ -44,7 +44,7 @@ export const menu = [
     price: 16,
     description:
       "Crispy sweet chili shrimp and tropical slaw in grilled flour tortillas.",
-    image: "",
+    image: "assets/images/menu-illustration-shrimp-tacos.webp",
     options: [],
     available: true,
     published: true,
@@ -90,7 +90,7 @@ export const menu = [
     category: "Appetizers",
     price: 8,
     description: "Hot, crispy seasoned fries.",
-    image: "",
+    image: "assets/images/menu-illustration-fries.webp",
     options: [],
     available: true,
     published: true,
@@ -103,7 +103,7 @@ export const menu = [
     price: 16,
     description:
       "Crispy fries, signature jerk chicken, cheese sauce, and our secret sauce.",
-    image: "",
+    image: "assets/images/menu-illustration-loaded-fries.webp",
     options: [],
     available: true,
     published: true,
@@ -439,7 +439,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 10,
     description: "Ask us what is simmering today.",
-    image: "",
+    image: "assets/images/menu-illustration-porridge.webp",
     options: [],
     available: true,
     published: true,
@@ -550,7 +550,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 21,
     description: "Succulent fried chicken and a homemade waffle.",
-    image: "",
+    image: "assets/images/menu-illustration-chicken-waffles.webp",
     options: [],
     available: true,
     published: true,
@@ -563,7 +563,7 @@ export const menu = [
     price: 15,
     description:
       "Served with boiled banana, yam, and dumpling, or fried dumpling.",
-    image: "",
+    image: "assets/images/menu-illustration-callaloo.webp",
     options: [
       {
         name: "Side",
@@ -590,7 +590,7 @@ export const menu = [
     price: 20,
     description:
       "Served with boiled banana, yam, and dumpling, or fried dumpling.",
-    image: "",
+    image: "assets/images/menu-illustration-ackee.webp",
     options: [
       {
         name: "Side",
@@ -616,7 +616,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 18,
     description: "Rich, creamy grits with jumbo shrimp or fried whiting.",
-    image: "",
+    image: "assets/images/menu-illustration-shrimp-grits.webp",
     options: [
       {
         name: "Topping",
@@ -642,7 +642,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 15,
     description: "Fluffy pancakes with eggs and bacon.",
-    image: "",
+    image: "assets/images/menu-illustration-pancakes.webp",
     options: [
       {
         name: "Eggs",
@@ -681,7 +681,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 17,
     description: "Fluffy blueberry pancakes with eggs and bacon.",
-    image: "",
+    image: "assets/images/menu-illustration-blueberry-pancakes.webp",
     options: [
       {
         name: "Eggs",
@@ -720,7 +720,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 16,
     description: "Rich French toast with eggs and bacon.",
-    image: "",
+    image: "assets/images/menu-illustration-french-toast.webp",
     options: [
       {
         name: "Eggs",
@@ -760,7 +760,7 @@ export const menu = [
     price: 19,
     description:
       "Hennessy-infused French toast, caramelized bananas, pecans, Henny caramel, and whipped cream. With eggs and bacon.",
-    image: "",
+    image: "assets/images/menu-illustration-hennessy-toast.webp",
     options: [
       {
         name: "Eggs",
@@ -800,7 +800,7 @@ export const menu = [
     price: 16,
     description:
       "Two slices of whole-wheat bread with avocado, tomatoes, and cucumbers.",
-    image: "",
+    image: "assets/images/menu-illustration-avocado-toast.webp",
     options: [],
     available: true,
     published: true,
@@ -812,7 +812,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 15,
     description: "A medley of fresh seasonal fruits.",
-    image: "",
+    image: "assets/images/menu-illustration-fruit.webp",
     options: [],
     available: true,
     published: true,
@@ -825,7 +825,7 @@ export const menu = [
     price: null,
     description:
       "Done to order with home fries. Ask your server for the price.",
-    image: "",
+    image: "assets/images/menu-illustration-steak-eggs.webp",
     options: [],
     available: true,
     published: true,
@@ -837,7 +837,7 @@ export const menu = [
     category: "Brunch sides",
     price: 4,
     description: "Your choice of pork or turkey bacon.",
-    image: "",
+    image: "assets/images/menu-illustration-bacon.webp",
     options: [
       {
         name: "Bacon",
@@ -863,7 +863,7 @@ export const menu = [
     category: "Brunch sides",
     price: 5,
     description: "Scrambled or fried.",
-    image: "",
+    image: "assets/images/menu-illustration-eggs.webp",
     options: [
       {
         name: "Eggs",
@@ -973,7 +973,7 @@ export const menu = [
     category: "Signature drinks",
     price: 16,
     description: "A sweet and sour lemony vodka cocktail with a Tingz twist.",
-    image: "",
+    image: "assets/images/menu-illustration-lemon-drop.webp",
     options: [],
     available: true,
     published: true,
@@ -985,7 +985,7 @@ export const menu = [
     category: "For the table",
     price: 20,
     description: "Your choice of rum punch or margarita.",
-    image: "",
+    image: "assets/images/menu-illustration-punch-bowl.webp",
     options: [
       {
         name: "Drink",
@@ -1011,7 +1011,7 @@ export const menu = [
     category: "For the table",
     price: 30,
     description: "Two or more people required.",
-    image: "",
+    image: "assets/images/menu-illustration-jumbo-bowl.webp",
     options: [
       {
         name: "Drink",
@@ -1037,7 +1037,7 @@ export const menu = [
     category: "For the table",
     price: 50,
     description: "Two or more people required.",
-    image: "",
+    image: "assets/images/menu-illustration-mega-bowl.webp",
     options: [
       {
         name: "Drink",
@@ -1064,7 +1064,7 @@ export const menu = [
     price: 24,
     description:
       "A flight of margaritas. Ask your server for today\u2019s flavors.",
-    image: "",
+    image: "assets/images/menu-illustration-margarita-flights.webp",
     options: [],
     available: true,
     published: true,
@@ -1076,7 +1076,7 @@ export const menu = [
     category: "For the table",
     price: 60,
     description: "For two or more people.",
-    image: "",
+    image: "assets/images/menu-illustration-rum-tower.webp",
     options: [],
     available: true,
     published: true,
@@ -1088,7 +1088,7 @@ export const menu = [
     category: "For the table",
     price: 60,
     description: "For two or more people.",
-    image: "",
+    image: "assets/images/menu-illustration-margarita-tower.webp",
     options: [],
     available: true,
     published: true,
@@ -1100,7 +1100,7 @@ export const menu = [
     category: "For the table",
     price: 30,
     description: "Available at Sunday brunch. Half tower $30; whole tower $60.",
-    image: "",
+    image: "assets/images/menu-illustration-brunch-tower.webp",
     options: [
       {
         name: "Drink",
@@ -1139,7 +1139,7 @@ export const menu = [
     category: "Soft drinks",
     price: 3,
     description: "Freshly brewed. Available at brunch.",
-    image: "",
+    image: "assets/images/menu-illustration-coffee.webp",
     options: [],
     available: true,
     published: true,
@@ -1151,7 +1151,7 @@ export const menu = [
     category: "Soft drinks",
     price: 3,
     description: "Available at brunch.",
-    image: "",
+    image: "assets/images/menu-illustration-tea.webp",
     options: [
       {
         name: "Tea",
@@ -1185,7 +1185,7 @@ export const menu = [
     category: "Soft drinks",
     price: 4,
     description: "Available at brunch.",
-    image: "",
+    image: "assets/images/menu-illustration-orange-juice.webp",
     options: [],
     available: true,
     published: true,

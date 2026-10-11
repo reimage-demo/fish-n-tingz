@@ -660,53 +660,54 @@ footer {
 }
 .menu-item {
   display: flex;
-  justify-content: space-between;
-  gap: 18px;
+  flex-direction: column;
+  gap: 16px;
   border-bottom: 1px solid var(--line);
-  padding: 22px 0;
+  padding: 24px 0;
   min-width: 0;
 }
-.menu-item > div:first-child {
-  flex: 1;
-}
-.menu-item h3 {
-  font-size: 25px;
-  margin: 0 0 10px;
-}
-.menu-item p {
-  font-size: 13px;
-  color: var(--muted);
-  margin-bottom: 12px;
-}
-.menu-item strong {
-  font-size: 15px;
-}
-.menu-thumb {
-  align-self: start;
-  width: 95px;
-  flex-shrink: 0;
-}
-.menu-thumb img {
-  width: 95px;
-  height: 100px;
-}
-.item-add {
-  min-height: 44px;
-  min-width: 44px;
-  border: 1px solid var(--line);
-  background: white;
-  color: var(--ink);
-  font-size: 24px;
-  display: grid;
-  place-items: center;
-  border-radius: 2px;
-}
-.menu-thumb .item-add {
+.menu-visual { margin: 0; }
+.menu-photo {
+  display: block;
   width: 100%;
-  margin-top: 6px;
+  border: 0;
+  padding: 0;
+  background: var(--soft);
+  cursor: pointer;
 }
-.menu-item > .item-add {
-  align-self: center;
+.menu-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.menu-visual figcaption, .image-caption {
+  margin: 6px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.menu-item-copy { display: flex; flex: 1; flex-direction: column; }
+.menu-item h3 { font-size: 25px; margin: 0 0 10px; }
+.menu-item p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+.menu-item strong { font-size: 16px; }
+.menu-item-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+.menu-details {
+  min-height: 44px;
+  border: 0;
+  border-bottom: 1px solid var(--green);
+  padding: 6px 0;
+  background: none;
+  color: var(--green);
+  font-weight: 700;
+  cursor: pointer;
 }
 .empty {
   padding: 36px 0;
@@ -748,9 +749,11 @@ body:has(dialog[open]) {
   overflow: hidden;
 }
 .detail-image {
-  height: 230px;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 .detail-price {
   font-size: 22px;
@@ -1381,7 +1384,7 @@ body:has(dialog[open]) {
     font-size: 36px;
   }
   .detail-image {
-    height: 200px;
+    max-height: 250px;
   }
   .desktop {
     display: none;
