@@ -5,6 +5,7 @@ await rm("dist", { recursive: true, force: true });
 await mkdir("dist", { recursive: true });
 for (const file of [
   "index.html",
+  "landing-page.html",
   "menu.html",
   "events.html",
   "contact.html",
