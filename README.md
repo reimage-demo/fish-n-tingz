@@ -62,7 +62,7 @@ Admin authorization is enforced server-side. Passwords use salted scrypt plus a 
 
 The original logo banner was extracted with the built-in imagegen tool, then resized to `assets/brand/logo.webp`. The full PNG is `assets/brand/logo-extracted.png`. Prompt: “Extract just the central stacked FISH N TINGZ brand mark and BAR AND GRILL line as a crisp transparent PNG for a website header. Preserve exactly the original white bold FISH lettering on red rectangular block, small slanted white N on yellow block, white TINGZ on green block beneath, and narrow BAR AND GRILL lettering below. Make BAR AND GRILL lettering dark forest green so it reads on white. Remove all palm trees, sky, background and the bottom tagline. No new elements, no shadows. Faithful extraction, not a redesign.”
 
-No generated food photography is used. Published restaurant images are illustrative of the restaurant’s menu; final presentation and availability are confirmed by the restaurant.
+Food imagery originates from the restaurant’s published photography. The homepage snapper hero uses an AI-assisted background extraction of `red-snapper.webp`, preserving the photographed dish and plate; the surrounding table and drinks were removed. Original photographs remain in the menu. Final presentation and availability are confirmed by the restaurant.
 
 ## October 2026 visual revision
 
@@ -73,3 +73,5 @@ Additional genuine restaurant photos: [shared drink tower](https://static.wixsta
 Customer requested no past events and omitted the October 16 video note. Customer identifies the 2025 HOT 93.7 jerk chicken award. Research confirms [Buck N Regg’s Best Damn Jerk Chicken Contest, July 15, 2025](https://www.audacy.com/hot937/latest/local/buck-n-regg-best-damn-jerk-chicken-contest-is-back), but a primary winner announcement naming Fish N Tingz was not located. No award claim is published pending corroboration.
 
 The original `create-pages.py` scaffold is historical; do not rerun it over maintained pages.
+
+The latest hero revision follows the user’s Grubhub composition reference: warm light background, shorter sentence-case headline, a large snapper plate cutout on a solid Fish N Tingz green panel, and direct ordering/menu/reservation links. The Rum Punch Tower message appears immediately below. Asset: `assets/images/snapper-hero-cutout.webp`, derived from the existing red snapper photo with the built-in image-editing tool.
