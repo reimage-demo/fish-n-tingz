@@ -1,0 +1,9 @@
+node_modules/
+dist/
+admin-portal/
+.env*
+!.env.example
+references/
+*.log
+.DS_Store
+.local/
