@@ -1,6 +1,7 @@
 import { rm, mkdir, copyFile, cp, readFile, writeFile } from "node:fs/promises";
 import { build } from "esbuild";
 import { createHash } from "node:crypto";
+import "./build-browser-vendor.mjs";
 await rm("dist", { recursive: true, force: true });
 await mkdir("dist", { recursive: true });
 for (const file of [

@@ -3,8 +3,7 @@ import {
   events as initialEvents,
   settings as initialSettings,
 } from "./catalog.js";
-import { ConvexClient } from "convex/browser";
-import { anyApi } from "convex/server";
+import { ConvexClient, anyApi } from "./vendor/convex-browser.js";
 export const escapeHTML = (value) =>
   String(value ?? "").replace(
     /[&<>"']/g,
