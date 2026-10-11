@@ -122,3 +122,89 @@ test("disabled accounts immediately lose access", async () => {
   });
   expect(await t.query(api.auth.me, { token })).toBeNull();
 });
+
+const tomorrow = () =>
+  new Date(Date.now() + 86400000).toISOString().slice(0, 10);
+const requestData = () => ({
+  requestKey: "12345678-abcd-4abc-abcd-123456789abc",
+  name: "Test Guest",
+  phone: "(860) 555-0100",
+  date: tomorrow(),
+  time: "18:00",
+  party: 4,
+  notes: "Window if possible",
+  website: "",
+});
+test("reservation requests are private, pending, and idempotent", async () => {
+  const t = make(),
+    input = requestData();
+  const result = await t.mutation(api.reservations.request, input);
+  expect(result.reference).toMatch(/^FNT-/);
+  expect(await t.mutation(api.reservations.request, input)).toEqual(result);
+  await expect(
+    t.query(api.reservations.list, { token: "public", status: "pending" }),
+  ).rejects.toThrow("UNAUTHORIZED");
+  const token = await staff(t),
+    rows = await t.query(api.reservations.list, { token, status: "pending" });
+  expect(rows).toHaveLength(1);
+  expect(rows[0].phone).toBe("8605550100");
+  expect(await t.query(api.content.publicContent, {})).not.toHaveProperty(
+    "reservations",
+  );
+  await expect(
+    t.mutation(api.reservations.setStatus, {
+      token: "public",
+      id: rows[0]._id,
+      status: "confirmed",
+    }),
+  ).rejects.toThrow("UNAUTHORIZED");
+  await t.mutation(api.reservations.setStatus, {
+    token,
+    id: rows[0]._id,
+    status: "confirmed",
+  });
+  expect(
+    await t.query(api.reservations.list, { token, status: "pending" }),
+  ).toHaveLength(0);
+  expect(
+    await t.query(api.reservations.list, { token, status: "confirmed" }),
+  ).toHaveLength(1);
+});
+test("reservation input rejects invalid dates, contacts, party sizes and bots", async () => {
+  const t = make();
+  for (const invalid of [
+    { date: "2020-01-01" },
+    { date: "2027-02-30" },
+    { time: "25:00" },
+    { phone: "123" },
+    { party: 1.5 },
+    { party: 21 },
+    { name: " " },
+    { website: "spam" },
+    { notes: "x".repeat(501) },
+  ]) {
+    await expect(
+      t.mutation(api.reservations.request, { ...requestData(), ...invalid }),
+    ).rejects.toThrow();
+  }
+});
+test("reservation retries cannot change received details and contact rate is limited", async () => {
+  const t = make(),
+    input = requestData();
+  await t.mutation(api.reservations.request, input);
+  await expect(
+    t.mutation(api.reservations.request, { ...input, party: 8 }),
+  ).rejects.toThrow("previous request");
+  for (let i = 2; i <= 3; i++)
+    await t.mutation(api.reservations.request, {
+      ...input,
+      requestKey: input.requestKey.replace("12345678", i + "2345678"),
+    });
+  await expect(
+    t.mutation(api.reservations.request, {
+      ...input,
+      phone: "+1 860 555 0100",
+      requestKey: input.requestKey.replace("12345678", "42345678"),
+    }),
+  ).rejects.toThrow("several requests");
+});

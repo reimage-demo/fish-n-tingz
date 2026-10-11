@@ -4,6 +4,7 @@ import { resolve, extname, sep } from "node:path";
 const base = resolve("dist"),
   port = Number(process.env.PORT || 4183);
 const types = {
+  ".ttf": "font/ttf",
   ".html": "text/html",
   ".css": "text/css",
   ".js": "text/javascript",

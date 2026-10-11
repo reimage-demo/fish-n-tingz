@@ -48,6 +48,8 @@ Customers can filter, search, select options, and save a quantity-aware list in 
 
 “Book this space” uses Settings → Appispot space booking URL once supplied. Until then it opens a phone enquiry dialog. No Appispot URL, capacity, event dates, or booking confirmation is invented. Sunday brunch and Thursday/Friday happy hour are the verified recurring events.
 
+Table reservations are native Convex requests at `contact.html#reservations`. Guests receive a reference, explicitly pending staff confirmation. Staff use Reservations to confirm, decline, cancel, or reopen requests, then contact guests by phone; no automatic SMS/email is sent. The form stores only name, phone, date/time, party size, and optional notes. Public APIs never return guest data. Server validation, duplicate-request protection, a per-contact daily limit, and a global hourly limit protect submissions. Capacity is managed by staff; this is not an automatic availability engine. Times are Eastern Time.
+
 Admin authorization is enforced server-side. Passwords use salted scrypt plus a server-only pepper. Random sessions are stored only as SHA-256 hashes, expire in 12 hours, and are revoked on logout. Failed login attempts are limited; expired/disabled/employee sessions cannot edit content. Browser tokens use sessionStorage. The initial admin provisioning script refuses to overwrite a local access file or bootstrap an existing account.
 
 ## Sources and assets
@@ -61,3 +63,13 @@ Admin authorization is enforced server-side. Passwords use salted scrypt plus a 
 The original logo banner was extracted with the built-in imagegen tool, then resized to `assets/brand/logo.webp`. The full PNG is `assets/brand/logo-extracted.png`. Prompt: “Extract just the central stacked FISH N TINGZ brand mark and BAR AND GRILL line as a crisp transparent PNG for a website header. Preserve exactly the original white bold FISH lettering on red rectangular block, small slanted white N on yellow block, white TINGZ on green block beneath, and narrow BAR AND GRILL lettering below. Make BAR AND GRILL lettering dark forest green so it reads on white. Remove all palm trees, sky, background and the bottom tagline. No new elements, no shadows. Faithful extraction, not a redesign.”
 
 No generated food photography is used. Published restaurant images are illustrative of the restaurant’s menu; final presentation and availability are confirmed by the restaurant.
+
+## October 2026 visual revision
+
+The existing routes and menu/order integrations remain intact. Fish N Tingz’s bright logo green and red replace the JamRoc-like forest palette. Layout uses rectangular photography, left-aligned locally hosted Barlow Condensed headings, asymmetrical menu features, review excerpts, and simple borders. No gradients, floating photos, pill controls, decorative arrows, or backdrop blur. Font licensed under SIL OFL, included with the asset.
+
+Additional genuine restaurant photos: [shared drink tower](https://static.wixstatic.com/media/331fb3_c94318f2cb2a47cb8eb8445834d9120c~mv2.jpg), [food service](https://static.wixstatic.com/media/331fb3_9c5619d3b6474819be7d3cfacf41fbf8~mv2.jpg). The tower photograph is labeled generically because the restaurant lists mimosa and rum punch towers together.
+
+Customer requested no past events and omitted the October 16 video note. Customer identifies the 2025 HOT 93.7 jerk chicken award. Research confirms [Buck N Regg’s Best Damn Jerk Chicken Contest, July 15, 2025](https://www.audacy.com/hot937/latest/local/buck-n-regg-best-damn-jerk-chicken-contest-is-back), but a primary winner announcement naming Fish N Tingz was not located. No award claim is published pending corroboration.
+
+The original `create-pages.py` scaffold is historical; do not rerun it over maintained pages.

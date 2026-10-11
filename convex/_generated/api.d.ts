@@ -12,6 +12,7 @@ import type * as accounts from "../accounts.js";
 import type * as auth from "../auth.js";
 import type * as content from "../content.js";
 import type * as lib_crypto from "../lib/crypto.js";
+import type * as reservations from "../reservations.js";
 import type * as seedData from "../seedData.js";
 
 import type {
@@ -25,6 +26,7 @@ declare const fullApi: ApiFromModules<{
   auth: typeof auth;
   content: typeof content;
   "lib/crypto": typeof lib_crypto;
+  reservations: typeof reservations;
   seedData: typeof seedData;
 }>;
 

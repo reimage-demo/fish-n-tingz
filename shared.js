@@ -34,6 +34,7 @@ const safeUrl = (value, fallback = "") => {
     return fallback;
   }
 };
+let client;
 let menu = initialMenu,
   events = initialEvents,
   settings = initialSettings,
@@ -103,12 +104,16 @@ function applySettings() {
 }
 function renderFeatured() {
   if (!$("#featured-items")) return;
-  $("#featured-items").innerHTML = ["red-snapper", "oxtail", "oxtail-tacos"]
+  $("#featured-items").innerHTML = [
+    "oxtail-tacos",
+    "red-snapper",
+    "jerk-chicken",
+  ]
     .map((slug) => menu.find((i) => i.slug === slug))
     .filter(Boolean)
     .map(
       (i) =>
-        `<article class="food-card"><a class="food-photo" href="menu.html?item=${encodeURIComponent(i.slug)}"><img src="${escapeHTML(safeUrl(i.image))}" width="1000" height="800" loading="lazy" alt="${escapeHTML(i.name)}"></a><div class="food-info"><p class="eyebrow">${escapeHTML(i.category)}</p><div class="food-title"><h3><a href="menu.html?item=${encodeURIComponent(i.slug)}">${escapeHTML(i.name)}</a></h3><strong>${money(i.price)}</strong></div><p>${escapeHTML(i.description)}</p></div></article>`,
+        `<article class="food-card"><a class="food-photo" href="menu.html?item=${encodeURIComponent(i.slug)}"><img src="${escapeHTML(safeUrl(i.image))}" width="1000" height="800" loading="lazy" alt="${escapeHTML(i.name)}"></a><div class="food-info"><div class="food-title"><h3><a href="menu.html?item=${encodeURIComponent(i.slug)}">${escapeHTML(i.name)}</a></h3><strong>${money(i.price)}</strong></div><p>${escapeHTML(i.description)}</p></div></article>`,
     )
     .join("");
 }
@@ -153,7 +158,7 @@ function itemDialog(slug) {
   const i = menu.find((x) => x.slug === slug);
   if (!i || !$("#item-dialog")) return;
   $("#item-detail").innerHTML =
-    `${i.image ? `<img class="detail-image" src="${escapeHTML(safeUrl(i.image))}" alt="${escapeHTML(i.name)}">` : ""}<p class="eyebrow">${escapeHTML(i.category)}</p><h2 id="item-title">${escapeHTML(i.name)}</h2><p class="small">${escapeHTML(i.description)}</p><div class="detail-price">${money(i.price)}</div><form id="item-form">${i.options.map((o, n) => `<label class="option-label">${escapeHTML(o.name)}<select name="option-${n}">${o.choices.map((c, j) => `<option value="${j}">${escapeHTML(c.label)}${c.extra ? " +" + money(c.extra) : ""}</option>`).join("")}</select></label>`).join("")}<div class="detail-actions"><label><span class="sr-only">Quantity</span><input class="quantity" name="quantity" type="number" min="1" max="20" value="1" required></label><button class="button" ${!i.available || i.price === null ? "disabled" : ""}>${!i.available ? "Currently unavailable" : i.price === null ? "Ask your server" : "Add to your picks"}</button></div></form><a class="text-link" href="${escapeHTML(safeUrl(settings.orderingUrl, "tel:+18607304440"))}" target="_blank" rel="noopener">Order on Toast ↗</a>${drinkCategories.includes(i.category) ? '<p class="small">Alcohol availability is confirmed by the restaurant. Towers may require dine-in service.</p>' : ""}`;
+    `${i.image ? `<img class="detail-image" src="${escapeHTML(safeUrl(i.image))}" alt="${escapeHTML(i.name)}">` : ""}<h2 id="item-title">${escapeHTML(i.name)}</h2><p class="small">${escapeHTML(i.description)}</p><div class="detail-price">${money(i.price)}</div><form id="item-form">${i.options.map((o, n) => `<label class="option-label">${escapeHTML(o.name)}<select name="option-${n}">${o.choices.map((c, j) => `<option value="${j}">${escapeHTML(c.label)}${c.extra ? " +" + money(c.extra) : ""}</option>`).join("")}</select></label>`).join("")}<div class="detail-actions"><label><span class="sr-only">Quantity</span><input class="quantity" name="quantity" type="number" min="1" max="20" value="1" required></label><button class="button" ${!i.available || i.price === null ? "disabled" : ""}>${!i.available ? "Currently unavailable" : i.price === null ? "Ask your server" : "Add to your picks"}</button></div></form><a class="text-link" href="${escapeHTML(safeUrl(settings.orderingUrl, "tel:+18607304440"))}" target="_blank" rel="noopener">Order on Toast </a>${drinkCategories.includes(i.category) ? '<p class="small">Alcohol availability is confirmed by the restaurant. Towers may require dine-in service.</p>' : ""}`;
   $("#item-form").onsubmit = (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget),
@@ -210,7 +215,7 @@ function renderEvents() {
     ? events
         .map(
           (e) =>
-            `<article class="event-row"><img src="${escapeHTML(safeUrl(e.image, "assets/images/our-space.webp"))}" width="240" height="180" loading="lazy" alt="${escapeHTML(e.title)}"><div><p class="eyebrow">${escapeHTML(e.schedule)}</p><h3>${escapeHTML(e.title)}</h3><p>${escapeHTML(e.description)}</p></div><a class="text-link" href="menu.html?category=${e.title.toLowerCase().includes("sunday") ? "Sunday%20brunch" : "Signature%20drinks"}">Explore the menu ↗</a></article>`,
+            `<article class="event-row"><img src="${escapeHTML(safeUrl(e.image, "assets/images/our-space.webp"))}" width="240" height="180" loading="lazy" alt="${escapeHTML(e.title)}"><div><p class="eyebrow">${escapeHTML(e.schedule)}</p><h3>${escapeHTML(e.title)}</h3><p>${escapeHTML(e.description)}</p></div><a class="text-link" href="menu.html?category=${e.title.toLowerCase().includes("sunday") ? "Sunday%20brunch" : "Signature%20drinks"}">Explore the menu </a></article>`,
         )
         .join("")
     : "<p>We’re planning the next good time. Follow us on Instagram for updates, or call to plan your own gathering.</p>";
@@ -288,7 +293,7 @@ updateCount();
 const requestedItem = new URLSearchParams(location.search).get("item");
 if (requestedItem) itemDialog(requestedItem);
 if (window.FNT_CONFIG?.convexUrl) {
-  const client = new ConvexClient(window.FNT_CONFIG.convexUrl);
+  client = new ConvexClient(window.FNT_CONFIG.convexUrl);
   client.onUpdate(
     anyApi.content.publicContent,
     {},
@@ -307,4 +312,56 @@ if (window.FNT_CONFIG?.convexUrl) {
         "Live menu temporarily unavailable; showing the published menu.",
       ),
   );
+}
+
+const reservationForm = $("#reservation-form");
+if (reservationForm) {
+  const easternDate = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+  reservationForm.elements.date.min = easternDate;
+  let requestKey = crypto.randomUUID();
+  let busy = false;
+  reservationForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (busy) return;
+    const status = $("#reservation-status"),
+      button = reservationForm.querySelector('button[type="submit"]');
+    const fields = Object.fromEntries(new FormData(reservationForm));
+    busy = true;
+    button.disabled = true;
+    button.textContent = "Sending request…";
+    status.textContent = "";
+    try {
+      if (!client)
+        throw new Error(
+          "Reservations are temporarily unavailable. Please call us.",
+        );
+      const result = await client.mutation(anyApi.reservations.request, {
+        ...fields,
+        party: Number(fields.party),
+        requestKey,
+      });
+      status.textContent = `Request received. Reference ${result.reference}. Your table is pending confirmation; our team will contact you by phone. To change your request, call ${settings.phone}.`;
+      status.className = "success";
+      reservationForm.reset();
+      requestKey = crypto.randomUUID();
+    } catch (error) {
+      status.className = "error";
+      status.textContent =
+        typeof error.data === "string"
+          ? error.data
+          : "We couldn’t send your request. Please try again, or call " +
+            settings.phone +
+            ".";
+    } finally {
+      busy = false;
+      button.disabled = false;
+      button.textContent = "Request a table";
+      status.focus();
+    }
+  });
 }

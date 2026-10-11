@@ -32,7 +32,30 @@ export const settingFields = {
   orderingUrl: v.string(),
   bookingUrl: v.string(),
 };
+export const reservationStatus = v.union(
+  v.literal("pending"),
+  v.literal("confirmed"),
+  v.literal("declined"),
+  v.literal("cancelled"),
+);
 export default defineSchema({
+  reservations: defineTable({
+    requestKey: v.string(),
+    reference: v.string(),
+    name: v.string(),
+    phone: v.string(),
+    date: v.string(),
+    time: v.string(),
+    party: v.number(),
+    notes: v.string(),
+    status: reservationStatus,
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  })
+    .index("by_request", ["requestKey"])
+    .index("by_phone_created", ["phone", "createdAt"])
+    .index("by_status_date", ["status", "date"])
+    .index("by_created", ["createdAt"]),
   users: defineTable({
     username: v.string(),
     role: v.union(v.literal("admin"), v.literal("employee")),
