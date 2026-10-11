@@ -124,11 +124,11 @@ a:hover {
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: 12px 24px;
+  padding: 12px 26px;
   background: var(--red);
   border: 1px solid var(--red);
   color: white;
-  border-radius: 2px;
+  border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
@@ -147,6 +147,15 @@ a:hover {
   background: transparent;
   border-color: currentColor;
   color: inherit;
+}
+.button.light:hover {
+  background: var(--soft);
+  border-color: var(--soft);
+}
+.button.outline:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: white;
 }
 .text-link,
 .gather-link {
@@ -573,19 +582,21 @@ footer {
 }
 .tabs {
   display: flex;
-  gap: 2px;
+  gap: 6px;
 }
 .tabs button {
   border: 0;
-  border-bottom: 2px solid transparent;
-  background: transparent;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--ink);
+  font-weight: 700;
   padding: 10px 18px;
   font-size: 14px;
   min-height: 44px;
 }
 .tabs button.selected {
-  border-bottom-color: var(--green);
-  font-weight: 700;
+  background: var(--ink);
+  color: white;
 }
 .search {
   margin-left: auto;
@@ -596,12 +607,14 @@ footer {
   width: 240px;
   font-size: 14px;
   min-height: 44px;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 .picks-button {
-  border: 1px solid var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
   background: white;
   font-size: 14px;
+  font-weight: 700;
   min-height: 44px;
   padding: 8px 16px;
   white-space: nowrap;
@@ -627,7 +640,7 @@ footer {
 .category-nav button {
   background: none;
   border: 0;
-  border-left: 3px solid transparent;
+  border-radius: 999px;
   text-align: left;
   padding: 12px 14px;
   font-size: 14px;
@@ -635,10 +648,9 @@ footer {
   min-height: 44px;
 }
 .category-nav button.selected {
-  border-left-color: var(--green);
-  color: var(--ink);
+  color: white;
   font-weight: 700;
-  background: var(--soft);
+  background: #176b0b;
 }
 .menu-note,
 .menu-footnote {
@@ -702,12 +714,23 @@ footer {
 .menu-details {
   min-height: 44px;
   border: 0;
-  border-bottom: 1px solid var(--green);
-  padding: 6px 0;
-  background: none;
-  color: var(--green);
+  border-radius: 999px;
+  padding: 10px 20px;
+  background: var(--soft);
+  color: #176b0b;
   font-weight: 700;
   cursor: pointer;
+}
+.menu-details:hover,
+.picks-button:hover,
+.pick-controls button:hover,
+.dialog-close:hover {
+  background: #e7ecdf;
+}
+.tabs button:not(.selected):hover,
+.category-nav button:not(.selected):hover {
+  background: #e7ecdf;
+  color: var(--ink);
 }
 .empty {
   padding: 36px 0;
@@ -741,7 +764,7 @@ dialog > p {
   height: 44px;
   border: 1px solid var(--line);
   background: white;
-  border-radius: 2px;
+  border-radius: 50%;
   font-size: 23px;
   z-index: 2;
 }
@@ -812,7 +835,7 @@ body:has(dialog[open]) {
 .pick-controls button {
   background: white;
   border: 1px solid var(--line);
-  border-radius: 2px;
+  border-radius: 999px;
   min-width: 44px;
   min-height: 44px;
 }
@@ -1289,11 +1312,6 @@ body:has(dialog[open]) {
     white-space: nowrap;
     padding: 10px 14px;
     font-size: 13px;
-    border-left: 0;
-    border-bottom: 2px solid transparent;
-  }
-  .category-nav button.selected {
-    border-bottom-color: var(--green);
   }
   .menu-item h3 {
     font-size: 26px;
