@@ -126,6 +126,8 @@ function visibleKind(i) {
       : !drinkCategories.includes(i.category))
   );
 }
+const isIllustration = (item) => item.image?.includes("menu-illustration-");
+const imageAlt = (item) => `${item.name}${isIllustration(item) ? " — AI-generated illustration" : ""}`;
 function renderMenu() {
   if (!$("#menu-content")) return;
   const categories = [
@@ -149,7 +151,7 @@ function renderMenu() {
       .map((c) => {
         const items = filtered.filter((i) => i.category === c);
         if (!items.length) return "";
-        return `<section class="menu-section"><h2>${escapeHTML(c)}</h2><div class="menu-grid">${items.map((i) => `<article class="menu-item"><div><h3>${escapeHTML(i.name)}</h3><p>${escapeHTML(i.description)}</p><strong>${money(i.price)}</strong>${!i.available ? "<p>Currently unavailable</p>" : ""}</div>${i.image ? `<div class="menu-thumb"><img src="${escapeHTML(safeUrl(i.image))}" width="95" height="100" alt="${escapeHTML(i.name)}" loading="lazy"><button class="item-add" data-item="${escapeHTML(i.slug)}" aria-label="View ${escapeHTML(i.name)}">+</button></div>` : `<button class="item-add" data-item="${escapeHTML(i.slug)}" aria-label="View ${escapeHTML(i.name)}">+</button>`}</article>`).join("")}</div></section>`;
+        return `<section class="menu-section"><h2>${escapeHTML(c)}</h2><div class="menu-grid">${items.map((i) => `<article class="menu-item">${i.image ? `<figure class="menu-visual"><button class="menu-photo" data-item="${escapeHTML(i.slug)}" aria-label="View ${escapeHTML(i.name)}"><img src="${escapeHTML(safeUrl(i.image))}" width="720" height="540" alt="${escapeHTML(imageAlt(i))}" loading="lazy" decoding="async"></button>${isIllustration(i) ? '<figcaption>AI-generated illustration</figcaption>' : ''}</figure>` : ''}<div class="menu-item-copy"><h3>${escapeHTML(i.name)}</h3><p>${escapeHTML(i.description)}</p><div class="menu-item-action"><strong>${money(i.price)}</strong><button class="menu-details" data-item="${escapeHTML(i.slug)}" aria-label="View ${escapeHTML(i.name)} details">View item</button></div>${!i.available ? "<p>Currently unavailable</p>" : ""}</div></article>`).join("")}</div></section>`;
       })
       .join("") ||
     '<div class="empty"><h2>No matches this time.</h2><p>Try another dish, ingredient, or category.</p><button class="button" id="clear-filters">Show the full menu</button></div>';
@@ -158,7 +160,7 @@ function itemDialog(slug) {
   const i = menu.find((x) => x.slug === slug);
   if (!i || !$("#item-dialog")) return;
   $("#item-detail").innerHTML =
-    `${i.image ? `<img class="detail-image" src="${escapeHTML(safeUrl(i.image))}" alt="${escapeHTML(i.name)}">` : ""}<h2 id="item-title">${escapeHTML(i.name)}</h2><p class="small">${escapeHTML(i.description)}</p><div class="detail-price">${money(i.price)}</div><form id="item-form">${i.options.map((o, n) => `<label class="option-label">${escapeHTML(o.name)}<select name="option-${n}">${o.choices.map((c, j) => `<option value="${j}">${escapeHTML(c.label)}${c.extra ? " +" + money(c.extra) : ""}</option>`).join("")}</select></label>`).join("")}<div class="detail-actions"><label><span class="sr-only">Quantity</span><input class="quantity" name="quantity" type="number" min="1" max="20" value="1" required></label><button class="button" ${!i.available || i.price === null ? "disabled" : ""}>${!i.available ? "Currently unavailable" : i.price === null ? "Ask your server" : "Add to your picks"}</button></div></form><a class="text-link" href="${escapeHTML(safeUrl(settings.orderingUrl, "tel:+18607304440"))}" target="_blank" rel="noopener">Order on Toast </a>${drinkCategories.includes(i.category) ? '<p class="small">Alcohol availability is confirmed by the restaurant. Towers may require dine-in service.</p>' : ""}`;
+    `${i.image ? `<img class="detail-image" src="${escapeHTML(safeUrl(i.image))}" alt="${escapeHTML(imageAlt(i))}">${isIllustration(i) ? '<p class="image-caption">AI-generated illustration. Actual presentation may vary.</p>' : ""}` : ""}<h2 id="item-title">${escapeHTML(i.name)}</h2><p class="small">${escapeHTML(i.description)}</p><div class="detail-price">${money(i.price)}</div><form id="item-form">${i.options.map((o, n) => `<label class="option-label">${escapeHTML(o.name)}<select name="option-${n}">${o.choices.map((c, j) => `<option value="${j}">${escapeHTML(c.label)}${c.extra ? " +" + money(c.extra) : ""}</option>`).join("")}</select></label>`).join("")}<div class="detail-actions"><label><span class="sr-only">Quantity</span><input class="quantity" name="quantity" type="number" min="1" max="20" value="1" required></label><button class="button" ${!i.available || i.price === null ? "disabled" : ""}>${!i.available ? "Currently unavailable" : i.price === null ? "Ask your server" : "Add to your picks"}</button></div></form><a class="text-link" href="${escapeHTML(safeUrl(settings.orderingUrl, "tel:+18607304440"))}" target="_blank" rel="noopener">Order on Toast </a>${drinkCategories.includes(i.category) ? '<p class="small">Alcohol availability is confirmed by the restaurant. Towers may require dine-in service.</p>' : ""}`;
   $("#item-form").onsubmit = (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget),
@@ -298,7 +300,10 @@ if (window.FNT_CONFIG?.convexUrl) {
     anyApi.content.publicContent,
     {},
     (content) => {
-      menu = content.menu;
+      menu = content.menu.map((item) => ({
+        ...item,
+        image: item.image || initialMenu.find((original) => original.slug === item.slug)?.image || "",
+      }));
       events = content.events;
       if (content.settings) settings = content.settings;
       applySettings();

@@ -1,0 +1,146 @@
+{
+  "method": "Built-in image_gen tool",
+  "date": "2026-10-11",
+  "images": [
+    {
+      "slug": "shrimp-tacos",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Three grilled flour tortillas filled with crispy sweet chili shrimp and tropical cabbage slaw. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-shrimp-tacos.webp"
+    },
+    {
+      "slug": "fries",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: A side serving of hot crispy golden seasoned French fries on a small white plate. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-fries.webp"
+    },
+    {
+      "slug": "loaded-fries",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Crispy French fries topped with chopped chargrilled Jamaican jerk chicken, melted cheese sauce and a light drizzle of creamy house sauce. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-loaded-fries.webp"
+    },
+    {
+      "slug": "porridge",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: A warm bowl of smooth creamy Jamaican-style breakfast porridge with a very light dusting of cinnamon; a representative porridge of the day. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-porridge.webp"
+    },
+    {
+      "slug": "chicken-waffles",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Golden fried chicken pieces on a homemade golden Belgian waffle. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-chicken-waffles.webp"
+    },
+    {
+      "slug": "callaloo",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Jamaican cooked leafy callaloo greens with onion and peppers, alongside peeled boiled green banana, white yam pieces and one boiled dumpling. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-callaloo.webp"
+    },
+    {
+      "slug": "ackee",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Authentic Jamaican ackee and saltfish: soft pale yellow ackee lobes gently mixed with flaked salt cod, tomato, onion and sweet peppers. Alongside boiled green banana, yam pieces and a boiled dumpling. Not scrambled eggs. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-ackee.webp"
+    },
+    {
+      "slug": "shrimp-grits",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Jumbo seasoned shrimp over rich creamy pale yellow grits in a shallow white bowl. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-shrimp-grits.webp"
+    },
+    {
+      "slug": "pancakes",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Exactly two stacked golden fluffy pancakes with softly scrambled eggs and crispy bacon beside them, modest maple syrup. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-pancakes.webp"
+    },
+    {
+      "slug": "blueberry-pancakes",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Exactly two fluffy blueberry pancakes, visible blueberries cooked into batter, with scrambled eggs and crispy bacon beside them. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-blueberry-pancakes.webp"
+    },
+    {
+      "slug": "french-toast",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Thick golden pan-fried French toast slices with a modest drizzle of syrup, scrambled eggs and crispy bacon beside them. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-french-toast.webp"
+    },
+    {
+      "slug": "hennessy-toast",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Golden French toast topped with caramelized banana slices, pecans, amber cognac caramel sauce and a small dollop of whipped cream, with scrambled eggs and bacon beside it. No bottles or brand labels. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-hennessy-toast.webp"
+    },
+    {
+      "slug": "avocado-toast",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Two slices of whole-wheat toast topped with fresh avocado, tomato and cucumber. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-avocado-toast.webp"
+    },
+    {
+      "slug": "fruit",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: A simple bowl of fresh seasonal fruit medley: pineapple, melon, strawberries and grapes. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-fruit.webp"
+    },
+    {
+      "slug": "steak-eggs",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: A grilled steak with two fried eggs and golden diced home fries, plated breakfast. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-steak-eggs.webp"
+    },
+    {
+      "slug": "bacon",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: A small side plate of crispy cooked pork bacon strips. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-bacon.webp"
+    },
+    {
+      "slug": "eggs",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Exactly two sunny-side-up fried eggs on a small white side plate. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-eggs.webp"
+    },
+    {
+      "slug": "lemon-drop",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: A pale yellow lemon vodka cocktail in a stemmed martini glass, fine sugar rim and lemon twist. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-lemon-drop.webp"
+    },
+    {
+      "slug": "punch-bowl",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: A clear round sharing bowl of reddish-orange Caribbean rum punch with ice, orange and lime slices, two plain straws. Entire bowl visible. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-punch-bowl.webp"
+    },
+    {
+      "slug": "jumbo-bowl",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: A large clear round sharing goblet filled with tropical reddish-orange rum punch, ice and a modest citrus garnish, two plain straws. Illustrative jumbo sharing cocktail bowl; no specific volume markings. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-jumbo-bowl.webp"
+    },
+    {
+      "slug": "mega-bowl",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: An extra-large clear low round sharing bowl of reddish-orange tropical rum punch, ice and citrus, four plain straws. Entire bowl visible; representative sharing drink with no volume markings. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-mega-bowl.webp"
+    },
+    {
+      "slug": "margarita-flights",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: A tasting flight of four small margaritas in neat short clear glasses on a simple narrow wooden tasting board: pale lime, golden mango, pink strawberry and orange tropical flavors, subtle salted rims, no labels. Representative daily flavors. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-margarita-flights.webp"
+    },
+    {
+      "slug": "rum-tower",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: One tall clear cylindrical tabletop drink dispenser tower with a black base and functional tap near the bottom, filled with reddish-orange Caribbean rum punch. Two short glasses beside the base. Full tower including top and base visible, realistic bar drink tower, no labels or volume markings. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-rum-tower.webp"
+    },
+    {
+      "slug": "margarita-tower",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: One tall clear cylindrical tabletop drink dispenser tower with black base and functional tap near bottom, filled with pale lime margarita, with two small salt-rimmed glasses beside the base. Full tower entirely visible, no text or volume markings. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-margarita-tower.webp"
+    },
+    {
+      "slug": "brunch-tower",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: One tall clear cylindrical tabletop drink dispenser with black base and functional tap near bottom, filled with golden-orange mimosa. Two elegant champagne flutes beside the base. Entire tower visible, no text or volume markings. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-brunch-tower.webp"
+    },
+    {
+      "slug": "coffee",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Freshly brewed black coffee in a simple white ceramic cup on a matching saucer, subtle natural steam. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-coffee.webp"
+    },
+    {
+      "slug": "tea",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: Freshly brewed amber tea in a simple white ceramic cup on a matching saucer, subtle natural steam. Representative hot tea, no tea-bag branding. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-tea.webp"
+    },
+    {
+      "slug": "orange-juice",
+      "prompt": "Use case: photorealistic-natural. Asset type: illustrative restaurant menu photograph for Fish N Tingz, a West Indian bar and grill. Generate ONE photograph, no collage. Subject: A single clear tumbler of fresh vibrant orange juice, realistic slight pulp, modest condensation. No fruit props. Composition: landscape 4:3, entire dish or glass clearly visible, close appetizing three-quarter view, subject centered with modest breathing room. Warm off-white tabletop, simple white ceramic plate or appropriate clear glassware, quiet background, natural side window light, realistic food textures and portions, editorial restaurant photography. No text, logos, branding, people, hands, decorative props or watermarks. This is an illustrative menu image, not documentary evidence.",
+      "destination": "assets/images/menu-illustration-orange-juice.webp"
+    }
+  ]
+}

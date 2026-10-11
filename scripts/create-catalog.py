@@ -58,6 +58,9 @@ add('tea','Tea','Soft drinks',3,'Available at brunch.','',[opt('Tea','Mint','Gin
 add('orange-juice','Orange Juice','Soft drinks',4,'Available at brunch.')
 settings=dict(phone='(860) 730-4440',address='384 Middle Turnpike W, Manchester, CT 06040',hours='Sunday | 12 PM – 8 PM\nMonday–Wednesday | Closed\nThursday | 4 PM – 11 PM\nFriday | 4 PM – 1 AM\nSaturday | 12 PM – 1 AM',orderingUrl='https://www.toasttab.com/fishntingzbarandgrill/v3/',bookingUrl='')
 events=[dict(title='Sunday, served right.',schedule='Every Sunday · Brunch 12–6 PM',description='Chicken & waffles, ackee and saltfish, shrimp & grits. Bring your people and make an afternoon of it.',image='assets/images/our-space.webp',published=True,sortOrder=0),dict(title='A little after-work island time.',schedule='Thursday & Friday · Happy hour 4–7 PM',description='Pull up a seat at the bar. Good conversation and your next favorite island drink are waiting.',image='assets/images/fish-n-tingz-punch.webp',published=True,sortOrder=1)]
+for item in items:
+ if not item['image']:
+  item['image'] = 'assets/images/menu-illustration-' + item['slug'] + '.webp'
 content='export const menu = '+json.dumps(items,indent=2)+';\nexport const settings = '+json.dumps(settings,indent=2)+';\nexport const events = '+json.dumps(events,indent=2)+';\n'
 open('catalog.js','w').write(content);open('convex/seedData.ts','w').write(content)
 print(len(items),'menu items transcribed')

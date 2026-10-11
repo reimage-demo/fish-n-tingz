@@ -45,6 +45,25 @@ test("anonymous users cannot read the staff dashboard", async () => {
     t.query(api.content.dashboard, { token: "untrusted" }),
   ).rejects.toThrow("UNAUTHORIZED");
 });
+
+test("image backfill fills missing photos and preserves staff edits", async () => {
+  const t = make();
+  await t.mutation(internal.content.seed, {});
+  await t.run(async (ctx) => {
+    const rows = await ctx.db.query("menuItems").collect();
+    const shrimp = rows.find((item) => item.slug === "shrimp-tacos")!;
+    const fries = rows.find((item) => item.slug === "fries")!;
+    await ctx.db.patch(shrimp._id, { image: "", price: 19, published: false });
+    await ctx.db.patch(fries._id, { image: "https://example.com/staff-photo.webp" });
+  });
+  expect(await t.mutation(internal.content.backfillMenuImages, {})).toEqual({ updated: 1 });
+  const rows = await t.run((ctx) => ctx.db.query("menuItems").collect());
+  expect(rows.find((item) => item.slug === "shrimp-tacos")).toMatchObject({
+    image: "assets/images/menu-illustration-shrimp-tacos.webp", price: 19, published: false,
+  });
+  expect(rows.find((item) => item.slug === "fries")?.image).toBe("https://example.com/staff-photo.webp");
+  expect(await t.mutation(internal.content.backfillMenuImages, {})).toEqual({ updated: 0 });
+});
 test("employees and expired sessions cannot manage content", async () => {
   for (const [role, expired] of [
     ["employee", false],

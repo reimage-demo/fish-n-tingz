@@ -105,3 +105,18 @@ export const seed = internalMutation({
     return { items: menu.length, events: events.length };
   },
 });
+
+// Add the published artwork without replacing staff-uploaded photos or menu edits.
+export const backfillMenuImages = internalMutation({
+  args: {},
+  handler: async (ctx) => {
+    let updated = 0;
+    for (const item of await ctx.db.query("menuItems").collect()) {
+      const image = menu.find((original) => original.slug === item.slug)?.image;
+      if (item.image || !image) continue;
+      await ctx.db.patch(item._id, { image, updatedAt: Date.now() });
+      updated++;
+    }
+    return { updated };
+  },
+});
