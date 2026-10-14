@@ -20,7 +20,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 24px;
+  scroll-padding-top: 136px;
 }
 body {
   margin: 0;
@@ -176,8 +176,13 @@ button.text-link {
   color: inherit;
 }
 .site-header {
-  width: min(1360px, 92%);
-  margin: auto;
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  width: 100%;
+  padding-inline: max(4%, calc((100% - 1360px) / 2));
+  background: white;
+  box-shadow: 0 1px 0 rgb(24 32 22 / 10%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -635,7 +640,7 @@ footer {
   flex-direction: column;
   gap: 4px;
   position: sticky;
-  top: 24px;
+  top: 136px;
   align-self: start;
 }
 .category-nav button {
@@ -1124,6 +1129,9 @@ body:has(dialog[open]) {
   }
 }
 @media (max-width: 700px) {
+  html {
+    scroll-padding-top: 106px;
+  }
   .wrap,
   .section {
     width: 90%;
@@ -1134,7 +1142,6 @@ body:has(dialog[open]) {
   .site-header {
     min-height: 90px;
     gap: 12px;
-    flex-wrap: wrap;
     padding-block: 8px;
   }
   .brand img {
@@ -1159,9 +1166,17 @@ body:has(dialog[open]) {
   }
   .site-header nav {
     display: none;
-    order: 4;
-    width: 100%;
-    padding: 8px 0 16px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: calc(100vh - 90px);
+    max-height: calc(100dvh - 90px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 8px 4% 20px;
+    background: white;
+    box-shadow: 0 12px 20px rgb(24 32 22 / 14%);
     flex-direction: column;
     gap: 4px;
   }
