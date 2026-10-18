@@ -3,8 +3,8 @@
     "id": "hall",
     "title": "The main hall",
     "description": "An open view of the event floor, seating, and entrance.",
-    "panorama": "assets/tour/hall.webp",
-    "preview": "assets/tour/hall-preview.webp",
+    "panorama": "assets/tour/hall-retouched.webp",
+    "preview": "assets/tour/hall-preview-retouched.webp",
     "haov": 295.628,
     "vaov": 62.2052,
     "vOffset": -2.633,
@@ -37,7 +37,8 @@
       "026.jpg",
       "027.jpg",
       "028.jpg"
-    ]
+    ],
+    "retouch": "AI-assisted lens-glare reduction; original retained as hall.webp."
   },
   {
     "id": "reverse",
