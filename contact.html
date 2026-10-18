@@ -10,7 +10,7 @@
     />
     <title>Your seat is waiting | Fish N Tingz Bar & Grill</title>
     <link rel="icon" href="assets/brand/logo.webp" />
-    <link rel="stylesheet" href="styles-79fd64664c44.css" />
+    <link rel="stylesheet" href="styles-e58863cfe976.css" />
     <link rel="stylesheet" href="site-policies-8a6b3bb54f14.css" />
     <script src="site-policies-9104e887edf7.js" defer></script>
   </head>
@@ -37,6 +37,7 @@
         <a href="index.html" data-nav="home">Home</a
         ><a href="menu.html" data-nav="menu">Our menu</a
         ><a href="events.html" data-nav="events">Events & gatherings</a
+        ><a href="venue.html" data-nav="venue">Venue rentals</a
         ><a href="contact.html" data-nav="contact">Visit &amp; reserve</a>
         <a
           class="button compact order-link mobile-order-link"
@@ -90,8 +91,7 @@
               <div><span>Saturday</span><span>12 PM – 1 AM</span></div>
             </div>
             <p class="small">
-              Sunday brunch 12–6 PM · Happy hour Thu–Fri 4–7 PM<br />Two-hour
-              seating limit for dine-in.
+              Sunday brunch 12–6 PM · Happy hour Thu–Fri 4–7 PM<br />One-hour minimum booking · Two-hour seating limit for dine-in.
             </p>
           </div>
         </div>
@@ -162,6 +162,12 @@
             </div>
           </div>
           <p id="reservation-time-help" class="reservation-helper">Every 30 minutes · Manchester, CT (Eastern Time). Times are requests, subject to restaurant availability.</p>
+          <label>Booking length
+            <select name="duration" required>
+              <option value="60">1 hour</option><option value="90">1½ hours</option><option value="120">2 hours</option>
+            </select>
+          </label>
+          <p class="small">Bookings last at least one hour. Dine-in seating is limited to two hours.</p>
           <p id="reservation-selection" class="reservation-selection" aria-live="polite" aria-atomic="true"></p>
           <label
             >Number of guests<input
@@ -240,6 +246,7 @@
           <p class="eyebrow">Find your way</p>
           <a href="menu.html">Food & drinks</a
           ><a href="events.html">Events & gatherings</a
+          ><a href="venue.html">Venue rentals</a
           ><a href="contact.html">Visit &amp; reserve</a>
         </div>
         <div>
@@ -300,6 +307,6 @@
     </dialog>
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
     <script src="public-config.js"></script>
-    <script type="module" src="shared-9196adf44f14.js"></script>
+    <script type="module" src="shared-d8e6bf878931.js"></script>
   </body>
 </html>
