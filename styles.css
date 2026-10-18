@@ -1695,3 +1695,5 @@ body:has(dialog[open]) {
 [data-visual-slots] .booking-select { display: none; }
 .visual-calendar[aria-busy="true"], .visual-times[aria-busy="true"] { opacity: .7; }
 @media(max-width: 480px) { .slot-list { grid-template-columns: repeat(2,minmax(0,1fr)); } .calendar-header h4 { font-size: 16px; } }
+
+.event-tour-link{display:table;margin-top:20px;min-height:44px;padding:10px 0;line-height:1.5}
