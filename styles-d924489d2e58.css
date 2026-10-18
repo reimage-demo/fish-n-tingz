@@ -1577,3 +1577,9 @@ body:has(dialog[open]) {
 #venue-status:not(:empty) { padding: 16px; background: var(--soft); border-left: 3px solid var(--red); }
 @media (max-width: 1000px) { .site-header { gap: 18px; } .site-header nav { gap: 16px; } .site-header nav a { font-size: 14px; } }
 @media (max-width: 800px) { .venue-hero { grid-template-columns: 1fr; gap: 28px; padding-block: 36px; } .venue-hero img { aspect-ratio: 4/3; } .venue-details { grid-template-columns: 1fr; gap: 24px; } }
+
+/* Keep the venue partnership beside its booking action on every screen. */
+.gather-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px 24px; }
+.venue-partner-link { display: inline-flex; align-items: baseline; flex-wrap: wrap; gap: 4px 8px; }
+.venue-partner { white-space: nowrap; }
+.gather .venue-partner-link { display: inline-flex; margin-left: 0; }
