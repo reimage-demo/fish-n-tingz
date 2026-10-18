@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self'; connect-src 'self' https://adjoining-bat-828.convex.cloud wss://adjoining-bat-828.convex.cloud; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+    <meta name="referrer" content="no-referrer">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#259d0a" />
@@ -18,7 +20,7 @@
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Fish N Tingz home"
-        ><img
+        ><img decoding="async"
           src="assets/brand/logo.webp"
           width="110"
           height="88"
@@ -95,7 +97,7 @@
             </p>
           </div>
         </div>
-        <img
+        <img decoding="async"
           src="assets/images/our-space.webp"
           width="384"
           height="510"
@@ -114,8 +116,8 @@
           <p class="small">More than 20 guests? <a class="text-link phone-link" href="tel:+18607304440">(860) 730-4440</a></p>
         </div>
         <div class="reservation-flow">
-        <form id="reservation-form" class="booking-wizard">
-          <fieldset id="reservation-fields"><legend class="sr-only">Your reservation request</legend>
+        <form method="post" id="reservation-form" class="booking-wizard">
+          <fieldset disabled id="reservation-fields"><legend class="sr-only">Your reservation request</legend>
           <section data-booking-step="0" data-step-label="Your table"><label class="booking-field">Preferred date<input name="date" data-label="Preferred date" type="date" id="reservation-date" required aria-describedby="reservation-time-help" /></label><div class="date-shortcuts" aria-label="Quick date selection"><button type="button" data-date-offset="0">Today</button><button type="button" data-date-offset="1">Tomorrow</button></div><label class="booking-field">Preferred time<select name="time" data-label="Preferred time" id="reservation-time" required aria-describedby="reservation-time-help"><option value="">Choose a time</option></select></label><label class="booking-field">Number of guests<select name="party" data-label="Number of guests" required><option value="1">1 guest</option><option value="2">2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option><option value="7">7 guests</option><option value="8">8 guests</option><option value="9">9 guests</option><option value="10">10 guests</option><option value="11">11 guests</option><option value="12">12 guests</option><option value="13">13 guests</option><option value="14">14 guests</option><option value="15">15 guests</option><option value="16">16 guests</option><option value="17">17 guests</option><option value="18">18 guests</option><option value="19">19 guests</option><option value="20">20 guests</option></select></label><label class="booking-field">Booking length<select name="duration" data-label="Booking length" required><option value="60">1 hour</option><option value="90">1½ hours</option><option value="120">2 hours</option></select></label><p id="reservation-time-help" class="booking-help">Times are Eastern. One-hour minimum; two-hour seating limit.</p><p id="reservation-selection" class="reservation-selection" aria-live="polite"></p></section>
           <section data-booking-step="1" data-step-label="Your details"><label class="booking-field">Your name<input name="name" data-label="Your name" type="text" autocomplete="name" minlength="2" maxlength="80" placeholder="Full name" required /></label><label class="booking-field">Phone number<input name="phone" data-label="Phone number" type="tel" autocomplete="tel" maxlength="25" placeholder="(860) 555-0123" required /></label><label class="booking-field">Anything else? <span class="optional">Optional</span><textarea name="notes" data-label="Notes" rows="2" maxlength="500" placeholder="Occasion, food preferences, or accessibility needs"></textarea></label></section>
           <section data-booking-step="2" data-step-label="Review"><div data-booking-review></div><p class="booking-notice">Our team will call to confirm availability. Your table is not booked until you hear from us. No payment is collected here.</p><p class="booking-privacy">Your details are used to arrange your request. <a href="privacy.html">Privacy policy</a></p></section><div class="form-trap" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off" /></label></div>
@@ -151,7 +153,7 @@
     <footer>
       <div class="footer-top">
         <a href="index.html" class="footer-logo"
-          ><img
+          ><img loading="lazy" decoding="async"
             src="assets/brand/logo.webp"
             width="130"
             height="100"
@@ -223,6 +225,6 @@
     </dialog>
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
     <script src="public-config.js"></script>
-    <script type="module" src="shared-712eab1cf504.js"></script>
+    <script type="module" src="shared-7872778e6d1a.js"></script>
   </body>
 </html>
