@@ -43,9 +43,9 @@
     "id": "reverse",
     "title": "Across the room",
     "description": "Look back across the hall toward the bar and feature wall.",
-    "panorama": "assets/tour/reverse-retouched.webp",
-    "preview": "assets/tour/reverse-preview-retouched.webp",
-    "retouch": "AI-assisted lens-glare reduction; original retained as reverse.webp.",
+    "panorama": "assets/tour/reverse-empty.webp",
+    "preview": "assets/tour/reverse-preview-empty.webp",
+    "retouch": "AI-assisted lens-glare reduction and removal of three people; originals retained.",
     "haov": 167.6122,
     "vaov": 62.698,
     "vOffset": -1.1658,
@@ -71,8 +71,8 @@
     "id": "lounge",
     "title": "The lounge",
     "description": "A closer look at the floral walls and lounge seating.",
-    "panorama": "assets/tour/lounge.webp",
-    "preview": "assets/tour/lounge-preview.webp",
+    "panorama": "assets/tour/lounge-empty.webp",
+    "preview": "assets/tour/lounge-preview-empty.webp",
     "haov": 154.3785,
     "vaov": 61.1133,
     "vOffset": -6.0264,
@@ -90,6 +90,7 @@
       "017.jpg",
       "018.jpg",
       "019.jpg"
-    ]
+    ],
+    "retouch": "AI-assisted removal of the person reflected in the mirror; original retained."
   }
 ]
