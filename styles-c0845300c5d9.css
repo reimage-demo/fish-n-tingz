@@ -1646,7 +1646,17 @@ body:has(dialog[open]) {
   .booking-navigation .button { padding-inline: 16px; font-size: 13px; }
   .booking-review-group dl > div { grid-template-columns: 1fr; gap: 4px; }
 }
-@media (prefers-reduced-motion: no-preference) {
-  .booking-wizard [data-booking-step]:not([hidden]) { animation: booking-step-in .2s ease-out; }
-  @keyframes booking-step-in { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+/* Comfortable tap targets and viewport-aware dropdowns on phones. */
+.booking-wizard, .booking-wizard fieldset, .booking-field { min-width: 0; }
+.booking-wizard input[type="date"]::-webkit-date-and-time-value { text-align: left; }
+.booking-wizard input[type="date"]::-webkit-datetime-edit { padding: 0; }
+.booking-back, .booking-edit { min-height: 44px; min-width: 44px; touch-action: manipulation; }
+.booking-select-options { max-height: min(252px, 42dvh); touch-action: pan-y; }
+.booking-select.is-upward .booking-select-options { top: auto; bottom: calc(100% + 6px); }
+#venue-confirmation-details, #venue-confirmation-next { overflow-wrap: anywhere; }
+@media(max-width:600px) {
+  .booking-navigation .button { flex: 1; white-space: normal; }
+  .booking-wizard .date-shortcuts button { min-height: 44px; }
+  .venue-hero .button, .venue-hero .text-link { display: flex; justify-content: center; width: 100%; margin: 12px 0 0; min-height: 52px; align-items: center; }
+  .booking-select-options [role="option"] { min-height: 52px; }
 }
