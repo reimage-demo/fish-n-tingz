@@ -1697,3 +1697,18 @@ body:has(dialog[open]) {
 @media(max-width: 480px) { .slot-list { grid-template-columns: repeat(2,minmax(0,1fr)); } .calendar-header h4 { font-size: 16px; } }
 
 .event-tour-link{display:table;margin-top:20px;min-height:44px;padding:10px 0;line-height:1.5}
+.catering-menu { padding-top: 72px; padding-bottom: 72px; border-top: 1px solid #d8d5ca; scroll-margin-top: 120px; }
+.catering-heading { max-width: 660px; }
+.catering-heading h2 { margin: 8px 0 16px; }
+.catering-minimum { font-weight: 700; }
+.catering-prices { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin: 32px 0; }
+.catering-prices h3 { font-size: 30px; margin-bottom: 12px; }
+.catering-prices dl { margin: 0; }
+.catering-prices dl > div { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid #d8d5ca; }
+.catering-prices dd { margin: 0; font-weight: 700; white-space: nowrap; }
+.catering-contact p { margin: 8px 0; }
+.catering-contact .button { margin-top: 16px; }
+.catering-jump { margin-top: 24px; }
+.party-policy { padding: 24px; border-left: 4px solid var(--green, #008d17); background: #f5f3eb; margin: 0 0 28px; }
+.party-policy h3 { margin-top: 0; }
+@media (max-width: 650px) { .catering-prices { grid-template-columns: 1fr; gap: 28px; } .catering-menu { padding-top: 40px; padding-bottom: 40px; } }
