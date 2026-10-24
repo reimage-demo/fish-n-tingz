@@ -109,3 +109,11 @@ body[data-page="venue"] .reservation-confirmation { border-color:var(--gold); ba
 }
 
 body[data-page="venue"] .confirmation-state { color:var(--gold); }
+
+.venue-location-note { font-weight: 700; color: #fff; }
+.venue-arrival { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 90px); align-items: center; padding-block: 70px; border-top: 1px solid #343434; }
+.venue-arrival > img { width: 100%; max-height: 620px; object-fit: cover; border-radius: 4px; }
+.venue-arrival h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.1; }
+.venue-arrival p { max-width: 46ch; }
+.venue-arrival .text-link { display: block; width: fit-content; margin-top: 24px; }
+@media (max-width: 700px) { .venue-arrival { grid-template-columns: 1fr; padding-block: 40px; } .venue-arrival > img { max-height: 500px; object-fit: contain; } }

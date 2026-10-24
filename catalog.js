@@ -5,7 +5,7 @@ export const menu = [
     category: "Appetizers",
     price: 16,
     description: "Gulf shrimp in fiery Scotch bonnet sauce.",
-    image: "assets/images/pepper-shrimp.webp",
+    image: "assets/images/pepper-shrimp-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -18,7 +18,7 @@ export const menu = [
     price: 16,
     description:
       "Jerk salmon, red onion, and mango pineapple salsa in grilled flour tortillas.",
-    image: "assets/images/jerked-fish-tacos.webp",
+    image: "assets/images/jerked-fish-tacos-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -31,7 +31,7 @@ export const menu = [
     price: 24,
     description:
       "Slow-braised oxtail and tropical slaw in grilled flour tortillas.",
-    image: "assets/images/oxtail-tacos.webp",
+    image: "assets/images/menu-photo-oxtail-tacos.webp",
     options: [],
     available: true,
     published: true,
@@ -44,7 +44,7 @@ export const menu = [
     price: 16,
     description:
       "Crispy sweet chili shrimp and tropical slaw in grilled flour tortillas.",
-    image: "assets/images/menu-illustration-shrimp-tacos.webp",
+    image: "assets/images/menu-illustration-shrimp-tacos-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -56,7 +56,7 @@ export const menu = [
     category: "Appetizers",
     price: 12,
     description: "Tossed in your choice of our signature sauces.",
-    image: "assets/images/wings.webp",
+    image: "assets/images/menu-photo-wings.webp",
     options: [
       {
         name: "Sauce",
@@ -90,7 +90,7 @@ export const menu = [
     category: "Appetizers",
     price: 8,
     description: "Hot, crispy seasoned fries.",
-    image: "assets/images/menu-illustration-fries.webp",
+    image: "assets/images/menu-illustration-fries-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -103,7 +103,7 @@ export const menu = [
     price: 16,
     description:
       "Crispy fries, signature jerk chicken, cheese sauce, and our secret sauce.",
-    image: "assets/images/menu-illustration-loaded-fries.webp",
+    image: "assets/images/menu-illustration-loaded-fries-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -115,7 +115,7 @@ export const menu = [
     category: "Appetizers",
     price: 5,
     description: "Traditional flatbread made from grated cassava.",
-    image: "assets/images/bammy.webp",
+    image: "assets/images/bammy-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -127,7 +127,7 @@ export const menu = [
     category: "Appetizers",
     price: 5,
     description: "Plain, sweet Jamaican fried dough.",
-    image: "assets/images/menu-illustration-festival-plain.webp",
+    image: "assets/images/menu-illustration-festival-plain-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -140,7 +140,7 @@ export const menu = [
     price: 32,
     description:
       "Whole red snapper with your choice of rice and steamed cabbage.",
-    image: "assets/images/red-snapper.webp",
+    image: "assets/images/red-snapper-clean.webp",
     options: [
       {
         name: "Preparation",
@@ -180,7 +180,7 @@ export const menu = [
     price: 27,
     description:
       "Chargrilled salmon with jerk or bourbon sauce and your choice of rice.",
-    image: "assets/images/grilled-salmon.webp",
+    image: "assets/images/grilled-salmon-clean.webp",
     options: [
       {
         name: "Sauce",
@@ -219,7 +219,7 @@ export const menu = [
     category: "Dinner",
     price: 27,
     description: "A bowl of curried jumbo Gulf shrimp with white rice on the side and steamed cabbage.",
-    image: "assets/images/menu-illustration-curried-shrimp.webp",
+    image: "assets/images/menu-illustration-curried-shrimp-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -231,7 +231,7 @@ export const menu = [
     category: "Dinner",
     price: 21,
     description: "Crispy breaded fried shrimp and fries, served as a basket.",
-    image: "assets/images/menu-illustration-shrimp-fries.webp",
+    image: "assets/images/menu-photo-shrimp-fries.webp",
     options: [],
     available: true,
     published: true,
@@ -244,7 +244,7 @@ export const menu = [
     price: 23,
     description:
       "Chargrilled chicken, signature jerk sauce, rice, and steamed cabbage.",
-    image: "assets/images/island-jerked-chicken.webp",
+    image: "assets/images/island-jerked-chicken-clean.webp",
     options: [
       {
         name: "Rice",
@@ -271,7 +271,7 @@ export const menu = [
     price: 32,
     description:
       "Slow-braised tender oxtail, rice and peas, and steamed cabbage.",
-    image: "assets/images/classic-jamaican-oxtail.webp",
+    image: "assets/images/classic-jamaican-oxtail-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -283,7 +283,7 @@ export const menu = [
     category: "Dinner",
     price: 24,
     description: "Tender curried goat, white rice, and steamed cabbage.",
-    image: "assets/images/menu-illustration-curried-goat.webp",
+    image: "assets/images/menu-illustration-curried-goat-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -296,7 +296,7 @@ export const menu = [
     price: 21,
     description:
       "Crispy outside, juicy inside. With rice and peas and steamed cabbage.",
-    image: "assets/images/fried-chicken.webp",
+    image: "assets/images/fried-chicken-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -309,7 +309,7 @@ export const menu = [
     price: 24,
     description:
       "Jerk-seasoned turkey, cheddar, lettuce, and tomato on brioche. Served with fries.",
-    image: "assets/images/jerked-turkey-burger.webp",
+    image: "assets/images/jerked-turkey-burger-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -321,7 +321,7 @@ export const menu = [
     category: "Dinner",
     price: 21,
     description: "Penne and bell peppers coated in a rich cream sauce.",
-    image: "assets/images/rasta-pasta.webp",
+    image: "assets/images/menu-photo-rasta-pasta.webp",
     options: [
       {
         name: "Add a protein",
@@ -351,7 +351,7 @@ export const menu = [
     category: "Dinner",
     price: 18,
     description: "Comforting curried chickpeas with your choice of rice.",
-    image: "assets/images/curried-chick-peas.webp",
+    image: "assets/images/menu-photo-chickpeas.webp",
     options: [
       {
         name: "Rice",
@@ -378,7 +378,7 @@ export const menu = [
     price: 12,
     description:
       "Greens, cucumber, carrots, onion, and tomato in house vinaigrette.",
-    image: "assets/images/house-salad.webp",
+    image: "assets/images/house-salad-clean.webp",
     options: [
       {
         name: "Add a protein",
@@ -409,7 +409,7 @@ export const menu = [
     price: 12,
     description:
       "Romaine, shaved Parmesan, and signature creamy Caesar dressing.",
-    image: "assets/images/caesar-salad.webp",
+    image: "assets/images/caesar-salad-clean.webp",
     options: [
       {
         name: "Add a protein",
@@ -439,7 +439,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 10,
     description: "Ask us what is simmering today.",
-    image: "assets/images/menu-illustration-porridge.webp",
+    image: "assets/images/menu-illustration-porridge-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -451,7 +451,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 10,
     description: "Grilled wings tossed in your choice of sauce.",
-    image: "assets/images/wings.webp",
+    image: "assets/images/menu-photo-wings.webp",
     options: [
       {
         name: "Sauce",
@@ -482,7 +482,7 @@ export const menu = [
     price: 12,
     description:
       "Greens, cucumber, carrots, onion, and tomato in house vinaigrette.",
-    image: "assets/images/house-salad.webp",
+    image: "assets/images/house-salad-clean.webp",
     options: [
       {
         name: "Add a protein",
@@ -516,7 +516,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 12,
     description: "Romaine, shaved Parmesan, and creamy Caesar dressing.",
-    image: "assets/images/caesar-salad.webp",
+    image: "assets/images/caesar-salad-clean.webp",
     options: [
       {
         name: "Add a protein",
@@ -550,7 +550,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 21,
     description: "Succulent fried chicken and a homemade waffle.",
-    image: "assets/images/menu-illustration-chicken-waffles.webp",
+    image: "assets/images/menu-illustration-chicken-waffles-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -563,7 +563,7 @@ export const menu = [
     price: 15,
     description:
       "Served with boiled banana, yam, and dumpling, or fried dumpling.",
-    image: "assets/images/menu-illustration-callaloo.webp",
+    image: "assets/images/menu-illustration-callaloo-clean.webp",
     options: [
       {
         name: "Side",
@@ -590,7 +590,7 @@ export const menu = [
     price: 20,
     description:
       "Served with boiled banana, yam, and dumpling, or fried dumpling.",
-    image: "assets/images/menu-illustration-ackee.webp",
+    image: "assets/images/menu-illustration-ackee-clean.webp",
     options: [
       {
         name: "Side",
@@ -616,7 +616,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 18,
     description: "Rich, creamy grits with jumbo shrimp or fried whiting.",
-    image: "assets/images/menu-illustration-shrimp-grits.webp",
+    image: "assets/images/menu-photo-shrimp-grits.webp",
     options: [
       {
         name: "Topping",
@@ -642,7 +642,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 15,
     description: "Fluffy pancakes with eggs and bacon.",
-    image: "assets/images/menu-illustration-pancakes.webp",
+    image: "assets/images/menu-illustration-pancakes-clean.webp",
     options: [
       {
         name: "Eggs",
@@ -681,7 +681,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 17,
     description: "Fluffy blueberry pancakes with eggs and bacon.",
-    image: "assets/images/menu-illustration-blueberry-pancakes.webp",
+    image: "assets/images/menu-illustration-blueberry-pancakes-clean.webp",
     options: [
       {
         name: "Eggs",
@@ -720,7 +720,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 16,
     description: "Rich French toast with eggs and bacon.",
-    image: "assets/images/menu-illustration-french-toast.webp",
+    image: "assets/images/menu-illustration-french-toast-clean.webp",
     options: [
       {
         name: "Eggs",
@@ -760,7 +760,7 @@ export const menu = [
     price: 19,
     description:
       "Hennessy-infused French toast, caramelized bananas, pecans, Henny caramel, and whipped cream. With eggs and bacon.",
-    image: "assets/images/menu-illustration-hennessy-toast.webp",
+    image: "assets/images/menu-illustration-hennessy-toast-clean.webp",
     options: [
       {
         name: "Eggs",
@@ -800,7 +800,7 @@ export const menu = [
     price: 16,
     description:
       "Two slices of whole-wheat bread with avocado, tomatoes, and cucumbers.",
-    image: "assets/images/menu-illustration-avocado-toast.webp",
+    image: "assets/images/menu-illustration-avocado-toast-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -812,7 +812,7 @@ export const menu = [
     category: "Sunday brunch",
     price: 15,
     description: "A medley of fresh seasonal fruits.",
-    image: "assets/images/menu-illustration-fruit.webp",
+    image: "assets/images/menu-illustration-fruit-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -825,7 +825,7 @@ export const menu = [
     price: null,
     description:
       "Done to order with home fries. Ask your server for the price.",
-    image: "assets/images/menu-illustration-steak-eggs.webp",
+    image: "assets/images/menu-illustration-steak-eggs-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -837,7 +837,7 @@ export const menu = [
     category: "Brunch sides",
     price: 4,
     description: "Your choice of pork or turkey bacon.",
-    image: "assets/images/menu-illustration-bacon.webp",
+    image: "assets/images/menu-illustration-bacon-clean.webp",
     options: [
       {
         name: "Bacon",
@@ -863,7 +863,7 @@ export const menu = [
     category: "Brunch sides",
     price: 5,
     description: "Scrambled or fried.",
-    image: "assets/images/menu-illustration-eggs.webp",
+    image: "assets/images/menu-illustration-eggs-clean.webp",
     options: [
       {
         name: "Eggs",
@@ -889,7 +889,7 @@ export const menu = [
     category: "Signature drinks",
     price: 13,
     description: "Wray & Nephew rum, fruit juices, and grenadine.",
-    image: "assets/images/fish-n-tingz-punch.webp",
+    image: "assets/images/fish-n-tingz-punch-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -902,7 +902,7 @@ export const menu = [
     price: 16,
     description:
       "Wray & Nephew rum, Licor 43, fresh lime, pineapple, and passion fruit.",
-    image: "assets/images/mobay-fever.webp",
+    image: "assets/images/mobay-fever-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -914,7 +914,7 @@ export const menu = [
     category: "Signature drinks",
     price: 16,
     description: "Bacardi rum, fresh mint, club soda, lime, and simple syrup.",
-    image: "assets/images/flavored-mojito.webp",
+    image: "assets/images/flavored-mojito-clean.webp",
     options: [
       {
         name: "Flavor",
@@ -948,7 +948,7 @@ export const menu = [
     category: "Signature drinks",
     price: 16,
     description: "Wray & Nephew rum, spicy ginger beer, fresh lime, and mint.",
-    image: "assets/images/jamaican-mule.webp",
+    image: "assets/images/jamaican-mule-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -961,7 +961,7 @@ export const menu = [
     price: 16,
     description:
       "Wray & Nephew rum, strawberry daiquiri, Blue Cura\u00e7ao, fresh mango, lime, and sour mix.",
-    image: "assets/images/bob-marley.webp",
+    image: "assets/images/bob-marley-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -973,7 +973,7 @@ export const menu = [
     category: "Signature drinks",
     price: 16,
     description: "A sweet and sour lemony vodka cocktail with a Tingz twist.",
-    image: "assets/images/menu-illustration-lemon-drop.webp",
+    image: "assets/images/menu-illustration-lemon-drop-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -985,7 +985,7 @@ export const menu = [
     category: "For the table",
     price: 20,
     description: "Your choice of rum punch or margarita.",
-    image: "assets/images/menu-illustration-punch-bowl.webp",
+    image: "assets/images/menu-illustration-punch-bowl-clean.webp",
     options: [
       {
         name: "Drink",
@@ -1011,7 +1011,7 @@ export const menu = [
     category: "For the table",
     price: 30,
     description: "Two or more people required.",
-    image: "assets/images/menu-illustration-jumbo-bowl.webp",
+    image: "assets/images/menu-illustration-jumbo-bowl-clean.webp",
     options: [
       {
         name: "Drink",
@@ -1037,7 +1037,7 @@ export const menu = [
     category: "For the table",
     price: 50,
     description: "Two or more people required.",
-    image: "assets/images/menu-illustration-mega-bowl.webp",
+    image: "assets/images/menu-illustration-mega-bowl-clean.webp",
     options: [
       {
         name: "Drink",
@@ -1064,7 +1064,7 @@ export const menu = [
     price: 24,
     description:
       "A flight of margaritas. Ask your server for today\u2019s flavors.",
-    image: "assets/images/menu-illustration-margarita-flights.webp",
+    image: "assets/images/menu-illustration-margarita-flights-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -1076,7 +1076,7 @@ export const menu = [
     category: "For the table",
     price: 60,
     description: "For two or more people.",
-    image: "assets/images/menu-illustration-rum-tower.webp",
+    image: "assets/images/menu-illustration-rum-tower-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -1088,7 +1088,7 @@ export const menu = [
     category: "For the table",
     price: 60,
     description: "For two or more people.",
-    image: "assets/images/menu-illustration-margarita-tower.webp",
+    image: "assets/images/menu-illustration-margarita-tower-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -1100,7 +1100,7 @@ export const menu = [
     category: "For the table",
     price: 30,
     description: "Available at Sunday brunch. Half tower $30; whole tower $60.",
-    image: "assets/images/menu-illustration-brunch-tower.webp",
+    image: "assets/images/menu-illustration-brunch-tower-clean.webp",
     options: [
       {
         name: "Drink",
@@ -1139,7 +1139,7 @@ export const menu = [
     category: "Soft drinks",
     price: 3,
     description: "Freshly brewed. Available at brunch.",
-    image: "assets/images/menu-illustration-coffee.webp",
+    image: "assets/images/menu-illustration-coffee-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -1151,7 +1151,7 @@ export const menu = [
     category: "Soft drinks",
     price: 3,
     description: "Available at brunch.",
-    image: "assets/images/menu-illustration-tea.webp",
+    image: "assets/images/menu-illustration-tea-clean.webp",
     options: [
       {
         name: "Tea",
@@ -1185,7 +1185,7 @@ export const menu = [
     category: "Soft drinks",
     price: 4,
     description: "Available at brunch.",
-    image: "assets/images/menu-illustration-orange-juice.webp",
+    image: "assets/images/menu-illustration-orange-juice-clean.webp",
     options: [],
     available: true,
     published: true,
@@ -1215,7 +1215,7 @@ export const events = [
     schedule: "Thursday & Friday \u00b7 Happy hour 4\u20137 PM",
     description:
       "Pull up a seat at the bar. Good conversation and your next favorite island drink are waiting.",
-    image: "assets/images/fish-n-tingz-punch.webp",
+    image: "assets/images/fish-n-tingz-punch-clean.webp",
     published: true,
     sortOrder: 1,
   },
