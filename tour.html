@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
@@ -11,13 +9,13 @@
   <link rel="icon" href="assets/brand/logo.webp">
   <link rel="stylesheet" href="vendor/pannellum/pannellum.css">
   <link rel="stylesheet" href="tour-b10c1b9f111a.css">
-  <script src="vendor/pannellum/pannellum.js" defer></script>
-  <script src="tour-f0a776537491.js" type="module"></script>
+  <script src="vendor/pannellum/pannellum.js" defer=""></script>
+  <script src="tour-04fd2c8fe8c8.js" type="module"></script>
 </head>
 <body>
   <main id="tour" aria-label="Legacy Events CT virtual tour">
     <div id="panorama" tabindex="0" aria-label="Panoramic room view. Drag or use arrow keys to look around. Use plus and minus to zoom."></div>
-    <img id="fallback" src="assets/tour/hall-preview-retouched.webp" alt="Wide view of the Legacy Events CT main hall" hidden>
+    <img id="fallback" src="assets/tour/hall-preview-retouched.webp" alt="Wide view of the Legacy Events CT main hall" hidden="" loading="eager" decoding="async" width="1200" height="675">
     <div class="loading" id="loading" role="status"><span class="loader"></span><span>Opening the space…</span></div>
     <header class="tour-header">
       <a class="back" href="venue.html">Venue</a>
@@ -26,22 +24,23 @@
     </header>
     
     <aside class="tools" aria-label="View controls">
-      <button class="icon-button" id="zoom-in" aria-label="Zoom in" title="Zoom in"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
-      <button class="icon-button" id="zoom-out" aria-label="Zoom out" title="Zoom out"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
+      <button class="icon-button" id="zoom-in" aria-label="Zoom in" title="Zoom in"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button>
+      <button class="icon-button" id="zoom-out" aria-label="Zoom out" title="Zoom out"><svg viewBox="0 0 24 24"><path d="M5 12h14"></path></svg></button>
       <span class="tool-rule"></span>
-      <button class="icon-button" id="fullscreen" aria-label="Enter fullscreen" title="Fullscreen"><svg viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg></button>
-      <button class="icon-button" id="help" aria-label="Tour information and controls" title="About this tour"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 11v6m0-10v1"/></svg></button>
+      <button class="icon-button" id="fullscreen" aria-label="Enter fullscreen" title="Fullscreen"><svg viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"></path></svg></button>
+      <button class="icon-button" id="help" aria-label="Tour information and controls" title="About this tour"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 11v6m0-10v1"></path></svg></button>
     </aside>
     <div class="drag-hint" id="hint">Drag to look around</div>
     <section class="tour-bottom" aria-label="Explore the rooms">
       <div class="scene-heading"><div><h1 id="scene-title">The main hall</h1><p class="scene-description" id="scene-description">An open view of the event floor, seating, and entrance.</p></div></div>
-      <div class="tray" id="tray"><nav class="scene-list" id="scene-list" aria-label="Tour stops"></nav><button id="arrival" class="arrival-card"><svg viewBox="0 0 24 24"><path d="M3 21V8l9-5 9 5v13M9 21V11h6v10M1 21h22"/></svg><span>Before you arrive<small>View the entrance</small></span></button></div>
-      <footer class="tour-footer"><div class="footer-actions"><button id="toggle-tray" aria-expanded="true" aria-controls="tray"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="7" height="14" rx="1"/><rect x="14" y="5" width="7" height="14" rx="1"/></svg><span>Explore views</span></button><span class="footer-rule"></span><button id="guided" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></svg><span>Play tour</span></button></div><button id="share" aria-label="Copy link to this view"><svg viewBox="0 0 24 24"><path d="m10 14 4-4m-6 6-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 10a4 4 0 0 0 6 0l4-4a4 4 0 0 0-6-6l-1 1" transform="translate(1 0) scale(.9)"/></svg><span>Share view</span></button></footer>
+      <div class="tray" id="tray"><nav class="scene-list" id="scene-list" aria-label="Tour stops"></nav><button id="arrival" class="arrival-card"><svg viewBox="0 0 24 24"><path d="M3 21V8l9-5 9 5v13M9 21V11h6v10M1 21h22"></path></svg><span>Before you arrive<small>View the entrance</small></span></button></div>
+      <footer class="tour-footer"><div class="footer-actions"><button id="toggle-tray" aria-expanded="true" aria-controls="tray"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="7" height="14" rx="1"></rect><rect x="14" y="5" width="7" height="14" rx="1"></rect></svg><span>Explore views</span></button><span class="footer-rule"></span><button id="guided" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"></path></svg><span>Play tour</span></button></div><button id="share" aria-label="Copy link to this view"><svg viewBox="0 0 24 24"><path d="m10 14 4-4m-6 6-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 10a4 4 0 0 0 6 0l4-4a4 4 0 0 0-6-6l-1 1" transform="translate(1 0) scale(.9)"></path></svg><span>Share view</span></button></footer>
     </section>
     <div id="status" class="toast" role="status" aria-live="polite"></div>
   </main>
   <dialog id="info-dialog"><button class="dialog-close icon-button" aria-label="Close information">×</button><h2>Tour controls</h2><p>Drag the room to explore. Select a circle or a thumbnail to move to another view. Use the + and − controls to get closer.</p><p><strong>On a keyboard</strong><br>Focus the room and use the arrow keys to look around. Press + or − to zoom. Tab moves between the tour controls.</p><p class="capture-note">These panoramas are stitched from real video of the venue. You can look around the areas captured: approximately 296° in the main hall, 168° in the reverse view, and 154° in the lounge. People and reflections were removed from the reverse, lounge, and entrance images. The main-hall and “Across the room” images were also retouched to reduce lens glare. This is a photographic tour, not a measured 3D scan. Layout and decor may change.</p><a class="dialog-link" href="venue.html#venue-request">Arrange a visit</a></dialog>
-  <dialog id="arrival-dialog"><button class="dialog-close icon-button" aria-label="Close entrance photo">×</button><div class="arrival-copy"><h2>Venue entrance</h2><p>Legacy Events CT<br>384E Middle Turnpike West<br>Manchester, CT 06040</p></div><img id="arrival-photo" src="assets/tour/arrival-empty.webp" alt="Legacy Events CT entrance at 384E Middle Turnpike West" width="720" height="1280" loading="lazy"></dialog>
+  <dialog id="arrival-dialog"><button class="dialog-close icon-button" aria-label="Close entrance photo">×</button><div class="arrival-copy"><h2>Venue entrance</h2><p>Legacy Events CT<br>384E Middle Turnpike West<br>Manchester, CT 06040</p></div><img id="arrival-photo" src="assets/tour/arrival-empty.webp" alt="Legacy Events CT entrance at 384E Middle Turnpike West" width="720" height="1280" loading="lazy" decoding="async"></dialog>
   <noscript><div class="no-script">Enable JavaScript for the interactive tour. <a href="assets/tour/hall-retouched.webp">View the main-hall panorama</a> or <a href="venue.html">return to the venue page</a>.</div></noscript>
-</body>
-</html>
+
+
+</body></html>
