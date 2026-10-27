@@ -315,15 +315,6 @@ button.text-link {
   object-fit: contain;
   z-index: 1;
 }
-.hero-dish figcaption {
-  position: relative;
-  z-index: 1;
-  font-size: 12px;
-  text-align: right;
-  font-weight: 600;
-  margin-top: 6px;
-  padding-right: 18px;
-}
 .house-special {
   display: flex;
   gap: 22px;
@@ -705,12 +696,6 @@ footer {
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-}
-.menu-visual figcaption, .image-caption {
-  margin: 6px 0 0;
-  font-size: 11px;
-  line-height: 1.5;
-  color: var(--muted);
 }
 .menu-item-copy { display: flex; flex: 1; flex-direction: column; }
 .menu-item h3 { font-size: 25px; margin: 0 0 10px; }
@@ -1477,9 +1462,6 @@ body:has(dialog[open]) {
     min-height: 480px;
     padding-right: 16px;
   }
-  .hero-dish figcaption {
-    font-size: 10px;
-  }
   .house-special {
     gap: 16px;
     font-size: 12px;
@@ -1534,11 +1516,6 @@ body:has(dialog[open]) {
     max-height: 300px;
     width: 100%;
   }
-  .hero-dish figcaption {
-    font-size: 10px;
-    margin-top: 8px;
-    padding-right: 0;
-  }
   .house-special {
     flex-wrap: wrap;
     gap: 4px 15px;
@@ -1563,7 +1540,6 @@ body:has(dialog[open]) {
 .venue-hero h1 span { color: var(--green); }
 .venue-hero figure { margin: 0; }
 .venue-hero img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
-.venue-hero figcaption { font-size: 12px; padding-top: 12px; color: var(--muted); }
 .venue-hero .text-link { margin-left: 20px; }
 .venue-details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; border-top: 1px solid var(--line); }
 .venue-details h2 { font-size: 36px; }
@@ -1732,7 +1708,6 @@ body:has(dialog[open]) {
 .catering-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 28px 0; }
 .catering-photos figure { margin: 0; }
 .catering-photos img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: contain; background: #f2f0e9; border-radius: 6px; padding: 18px; box-sizing: border-box; }
-.catering-photos figcaption { font-size: 13px; margin-top: 8px; }
 @media (max-width: 700px) { .past-celebrations { grid-template-columns: 1fr; } .past-photo-grid img { height: 290px; } .event-tabs { flex-wrap: wrap; } .catering-photos { gap: 12px; } .catering-photos img { padding: 8px; } }
 @media (prefers-reduced-motion: reduce) { .past-photo-grid img { transition: none; } }
 
