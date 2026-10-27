@@ -1692,10 +1692,14 @@ body:has(dialog[open]) {
 .event-tour-link{display:table;margin-top:20px;min-height:44px;padding:10px 0;line-height:1.5}
 .catering-menu { padding-top: 72px; padding-bottom: 72px; border-top: 1px solid #d8d5ca; scroll-margin-top: 120px; }
 .catering-heading { max-width: 660px; }
+.catering-page .catering-menu { border-top: 0; padding-top: 44px; }
+.catering-page h1 { font-size: clamp(48px, 6vw, 80px); }
+.catering-page h1 span { color: #237b11; }
+.inline-link { text-decoration: underline; text-underline-offset: 3px; }
 .catering-heading h2 { margin: 8px 0 16px; }
 .catering-minimum { font-weight: 700; }
 .catering-prices { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin: 32px 0; }
-.catering-prices h3 { font-size: 30px; margin-bottom: 12px; }
+.catering-prices h2, .catering-prices h3 { font-size: 30px; margin-bottom: 12px; }
 .catering-prices dl { margin: 0; }
 .catering-prices dl > div { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid #d8d5ca; }
 .catering-prices dd { margin: 0; font-weight: 700; white-space: nowrap; }
