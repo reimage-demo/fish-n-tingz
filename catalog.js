@@ -180,7 +180,7 @@ export const menu = [
     price: 27,
     description:
       "Chargrilled salmon with jerk or bourbon sauce and your choice of rice.",
-    image: "assets/images/grilled-salmon-clean.webp",
+    image: "assets/images/grilled-salmon-white-rice.webp",
     options: [
       {
         name: "Sauce",
