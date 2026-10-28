@@ -209,6 +209,9 @@ button.text-link {
   font-weight: 600;
   padding: 12px 0;
 }
+.site-header nav a:hover {
+  text-decoration: none;
+}
 .site-header nav a[aria-current] {
   border-bottom: 2px solid var(--green);
 }
