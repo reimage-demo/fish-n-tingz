@@ -1202,13 +1202,45 @@ export const settings = {
 };
 export const events = [
   {
-    title: "Sunday, served right.",
-    schedule: "Every Sunday \u00b7 Brunch 12\u20136 PM",
-    description:
-      "Chicken & waffles, ackee and saltfish, shrimp & grits. Bring your people and make an afternoon of it.",
+    title: "Karaoke Thursdays",
+    schedule: "Every Thursday \u00b7 9\u201311 PM",
+    description: "Grab the mic and bring your people for karaoke night.",
     image: "assets/images/our-space.webp",
     published: true,
     sortOrder: 0,
+  },
+  {
+    title: "2-for-1 Fridays",
+    schedule: "Every Friday \u00b7 4 PM\u20131 AM",
+    description: "Start the weekend with two-for-one Friday specials from open to late night.",
+    image: "assets/images/fish-n-tingz-punch-clean.webp",
+    published: true,
+    sortOrder: 1,
+  },
+  {
+    title: "No Rap Saturdays",
+    schedule: "Every Saturday \u00b7 2\u20136 PM",
+    description: "Saturday afternoon sounds, good food, and drinks from 2 to 6.",
+    image: "assets/images/food-spread.webp",
+    published: true,
+    sortOrder: 2,
+  },
+  {
+    title: "Saturday Nightlife",
+    schedule: "Every Saturday \u00b7 9 PM\u20132 AM",
+    description: "Saturday night energy, drinks, and island vibes until 2 AM.",
+    image: "assets/images/our-space.webp",
+    published: true,
+    sortOrder: 3,
+  },
+  {
+    title: "Sunday Brunch",
+    schedule: "Every Sunday \u00b7 12\u20137 PM",
+    description:
+      "Chicken & waffles, ackee and saltfish, shrimp & grits. Bring your people and make an afternoon of it.",
+    image: "assets/images/menu-photo-food-spread.webp",
+    published: true,
+    sortOrder: 4,
   },
   {
     title: "A little after-work island time.",
@@ -1217,6 +1249,6 @@ export const events = [
       "Pull up a seat at the bar. Good conversation and your next favorite island drink are waiting.",
     image: "assets/images/fish-n-tingz-punch-clean.webp",
     published: true,
-    sortOrder: 1,
+    sortOrder: 5,
   },
 ];
