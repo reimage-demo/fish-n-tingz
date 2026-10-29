@@ -7,7 +7,7 @@
     <meta name="description" content="Visit Fish N Tingz at 384 Middle Turnpike W in Manchester, CT. Opening hours, directions, and event bookings.">
     <title>Your seat is waiting | Fish N Tingz Bar &amp; Grill</title>
     <link rel="icon" href="assets/brand/logo.webp">
-    <link rel="stylesheet" href="styles-5528aa80d6c2.css">
+    <link rel="stylesheet" href="styles-e29c2278fbbe.css">
     <link rel="stylesheet" href="site-policies-8a6b3bb54f14.css">
     <script src="site-policies-9104e887edf7.js" defer=""></script>
   </head>
@@ -61,7 +61,7 @@
           <p>Choose your visit, add your details, and review. We’ll call to confirm your table.</p>
           <p class="small">Maximum occupancy is 176 guests. Large parties remain pending until reviewed by the administrator.</p>
         </div>
-        <aside class="party-policy"><h3>Coming with a large party?</h3><p>Parties of 10 or more require a $5-per-guest deposit. The deposit is refundable only when every guest in your party is present within 30 minutes of the reservation time. Staff will arrange payment and any eligible refund; no payment is collected online.</p><p>Large-party requests stay pending until the administrator reviews and approves them.</p></aside>
+        <aside class="party-policy"><h3>Coming with a large party?</h3><p>Parties of 10 or more require a $5-per-guest deposit. Your reservation will not be accepted or confirmed until we receive your deposit and staff verify payment. The deposit is refundable only when every guest in your party is present within 30 minutes of the reservation time. After submitting your request, send the deposit to $Fishntingz0 using the Cash App link. Include your reservation number and name in the payment note. Staff verify payment and arrange eligible refunds.</p><p>Large-party requests stay pending until the administrator reviews and approves them.</p></aside>
         <div class="reservation-flow">
         <form method="post" id="reservation-form" class="booking-wizard">
           <fieldset disabled="" id="reservation-fields"><legend class="sr-only">Your reservation request</legend>
@@ -76,15 +76,32 @@
         <section id="reservation-confirmation" class="reservation-confirmation" hidden="" tabindex="-1" aria-labelledby="confirmation-title">
           <p class="confirmation-state">Request received · Awaiting confirmation</p>
           <h3 id="confirmation-title">We’ve received your request.</h3>
-          <p id="confirmation-deposit" class="booking-help"></p><p id="confirmation-next"></p>
+          <p id="confirmation-next"></p>
+          <p id="confirmation-save" class="confirmation-save"><strong>Screenshot this confirmation.</strong> Save your name, reservation number, date and time so you can find them again after leaving this page.</p>
           <dl class="confirmation-details">
+            <div><dt>Name</dt><dd id="confirmation-name"></dd></div>
             <div><dt>Requested for</dt><dd id="confirmation-when"></dd></div>
             <div><dt>Guests</dt><dd id="confirmation-party"></dd></div>
-            <div><dt>Reference</dt><dd id="confirmation-reference"></dd></div>
+            <div><dt>Reservation number</dt><dd class="confirmation-number"><span id="confirmation-reference" tabindex="-1"></span><button type="button" class="text-link" id="copy-reservation-number">Copy reservation number</button></dd></div>
           </dl>
+          <p id="reservation-copy-status" class="booking-help" role="status" aria-live="polite"></p>
+          <section id="confirmation-payment" class="deposit-payment" hidden="" aria-labelledby="deposit-title">
+            <h3 id="deposit-title">Send your table deposit</h3>
+            <p id="confirmation-deposit" class="booking-help"></p>
+            <ol>
+              <li>Screenshot your confirmation above, then use <strong>Copy payment note</strong> below to copy your reservation number and name before opening Cash App.</li>
+              <li>Open Cash App and check the recipient is <strong>Fishntingz Bar and Grill · $Fishntingz0</strong> (ends with the number zero).</li>
+              <li>Enter <strong id="deposit-amount"></strong> and paste the following into the <strong>“For” / payment note</strong> field so staff can match your deposit:</li>
+            </ol>
+            <label class="booking-field" for="deposit-note">Reservation number + name<input id="deposit-note" readonly=""></label>
+            <div class="deposit-actions"><button type="button" class="text-link" id="copy-deposit-note">Copy payment note</button><a id="cashapp-deposit-link" class="button" href="https://cash.app/$Fishntingz0" target="_blank" rel="noopener noreferrer">Pay deposit with Cash App <span class="sr-only">(opens in a new tab)</span></a></div>
+            <p id="deposit-copy-status" role="status" class="booking-help"></p>
+            <p class="booking-help">Keep your Cash App receipt. Opening this link does not mark your deposit as paid or confirm your reservation. The restaurant verifies payment and handles eligible refunds. If you already paid, do not send a second payment.</p>
+          </section>
+
           <p id="confirmation-explanation">Your tables are held while our team reviews your request. Please wait for confirmation.</p>
           <div class="confirmation-actions">
-            <a class="button outline phone-link" href="tel:+18607304440">(860) 730-4440</a>
+            <a class="button outline phone-link" href="tel:8607304440">(860) 730-4440</a>
             <button class="text-link" id="reservation-new" type="button">Send another request</button>
           </div>
         </section>
@@ -143,7 +160,7 @@
     </dialog>
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
     <script src="public-config.js"></script>
-    <script type="module" src="shared-7b7b5adf9585.js"></script>
+    <script type="module" src="shared-3a8d1d31d2e5.js"></script>
   <script type="module" src="scroll-effects-9f16e45dd3c8.js"></script>
   
 
