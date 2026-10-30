@@ -1,0 +1,125 @@
+/* Legacy Events CT: the venue's own identity within the shared site. */
+body[data-page="venue"] {
+  --green: #8c6a11;
+  --red: #8c6a11;
+  --deep: #161616;
+  --ink: #161616;
+  --muted: #606060;
+  --soft: #f7f7f7;
+  --line: #dedbd3;
+  --gold: #8c6a11;
+  --gold-light: #d6a420;
+}
+/* Equal visible logo widths keep the partnership mark precisely centered. */
+.venue-brands {
+  --brand-width: 104px;
+  display: grid;
+  grid-template-columns: var(--brand-width) 20px var(--brand-width);
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  width: max-content;
+}
+.venue-brands a { display: block; position: relative; width: var(--brand-width); }
+.venue-brands .fish-brand { aspect-ratio: 360 / 260; }
+.venue-brands .fish-logo { display: block; width: 100%; height: 100%; }
+/* Lighten only the tagline on this black venue lockup, preserving the shared asset. */
+.venue-brands .fish-brand::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f6f1e5;
+  mask: url("assets/brand/logo.webp") center / 100% 100% no-repeat;
+  clip-path: inset(80% 0 0);
+  pointer-events: none;
+}
+/* The supplied Legacy image has wide black margins; frame the visible artwork. */
+.venue-brands .legacy-brand { aspect-ratio: 380 / 247; overflow: hidden; }
+.venue-brands .legacy-logo {
+  display: block;
+  position: absolute;
+  width: 157.895%;
+  max-width: none;
+  height: 112.146%;
+  left: -30%;
+  top: -11.336%;
+}
+.brand-cross {
+  display: grid;
+  place-items: center;
+  color: #d6a420;
+  font: 300 25px/1 Arial, sans-serif;
+}
+body[data-page="venue"] .site-header { background:#000; color:#fff; gap:22px; border-bottom:1px solid #8c6a11; }
+body[data-page="venue"] .site-header nav { gap:20px; }
+body[data-page="venue"] .site-header nav a[aria-current] { border-color:#d6a420; color:#eeb625; }
+body[data-page="venue"] .button { background:var(--gold); border-color:var(--gold); }
+body[data-page="venue"] .button:hover { background:#6e520c; border-color:#6e520c; }
+body[data-page="venue"] .button.outline { background:transparent; color:var(--gold); border-color:var(--gold); }
+body[data-page="venue"] .button.outline:hover { background:#161616; color:#fff; border-color:#161616; }
+body[data-page="venue"] .site-header .button { background:#d6a420; border-color:#d6a420; color:#000; }
+body[data-page="venue"] .site-header .button:hover { background:#eeb625; border-color:#eeb625; }
+body[data-page="venue"] .eyebrow { color:var(--gold); }
+.venue-gallery { display:grid; gap:22px; min-width:0; }
+.venue-hero .venue-gallery img { width:100%; height:auto; aspect-ratio:auto; object-fit:contain; }
+.venue-gallery a { display:block; }
+body[data-page="venue"] footer { background:#000; color:#fff; }
+body[data-page="venue"] footer .eyebrow { color:#d6a420; }
+.venue-footer-identity p { font-size:12px; color:#c4c4c4; margin-top:16px; }
+body[data-page="venue"] .footer-top { grid-template-columns:1.4fr 1fr 1.2fr 1fr; }
+body[data-page="venue"] .footer-bottom { color:#c4c4c4; border-color:#3b3423; }
+body[data-page="venue"] footer .footer-legal, body[data-page="venue"] footer .site-credit { color:#c4c4c4; }
+body[data-page="venue"] .booking-progress [aria-current="step"],
+body[data-page="venue"] .booking-intro .booking-step-count,
+body[data-page="venue"] .booking-edit { color:var(--gold); }
+body[data-page="venue"] .booking-progress [aria-current="step"] > span:first-child,
+body[data-page="venue"] .booking-progress .is-complete > span:first-child { background:var(--gold); border-color:var(--gold); color:#fff; }
+body[data-page="venue"] .booking-wizard input:focus,
+body[data-page="venue"] .booking-wizard textarea:focus,
+body[data-page="venue"] .booking-select-trigger:focus-visible { outline-color:#d6a42070; border-color:var(--gold); }
+body[data-page="venue"] .booking-select-trigger[aria-expanded="true"] { border-color:var(--gold); }
+body[data-page="venue"] .booking-select-options [role="option"]:hover,
+body[data-page="venue"] .booking-select-options .is-active { background:#f6f2e7; }
+body[data-page="venue"] .booking-select-options [aria-selected="true"] { color:#71550e; background:#f6f2e7; }
+body[data-page="venue"] .booking-wizard .reservation-selection,
+body[data-page="venue"] .booking-notice { background:#f6f2e7; color:#3b3423; border-color:var(--gold); }
+body[data-page="venue"] .calendar-day[data-state="available"],
+body[data-page="venue"] .time-slot[data-state="available"] { background:#faf7ee; color:#59420a; border-color:#d8c99f; }
+body[data-page="venue"] .calendar-day[aria-pressed="true"],
+body[data-page="venue"] .time-slot[aria-pressed="true"] { background:#8c6a11; color:#fff; border-color:#8c6a11; box-shadow:0 0 0 2px #8c6a11; }
+body[data-page="venue"] .calendar-feedback { color:#606060; }
+body[data-page="venue"] .reservation-confirmation { border-color:var(--gold); background:#faf7ee; }
+@media(max-width:1100px) {
+  body[data-page="venue"] .site-header { min-height:90px; gap:12px; padding-block:8px; }
+  body[data-page="venue"] .site-header > .button { display:none; }
+  body[data-page="venue"] .nav-toggle { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; padding:10px; margin-left:auto; border:0; background:transparent; color:#fff; }
+  body[data-page="venue"] .site-header nav { display:none; position:absolute; top:100%; left:0; right:0; max-height:calc(100dvh - 90px); overflow-y:auto; padding:8px 4% 20px; background:#000; flex-direction:column; gap:4px; }
+  body[data-page="venue"] .site-header.nav-open nav { display:flex; }
+  body[data-page="venue"] .site-header nav a { font-size:15px; padding:12px; }
+  body[data-page="venue"] .site-header nav .mobile-order-link { display:inline-flex; margin-top:12px; }
+  body[data-page="venue"] .footer-top { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) {
+  .venue-brands { --brand-width:82px; gap:12px; }
+  .brand-cross { font-size:21px; }
+  .venue-gallery { gap:18px; }
+  body[data-page="venue"] .footer-top { grid-template-columns:1fr; gap:22px; }
+  body[data-page="venue"] .venue-hero h1 { font-size:clamp(42px,10.5vw,60px); }
+}
+
+body[data-page="venue"] .confirmation-state { color:var(--gold); }
+
+.venue-location-note { font-weight: 700; color: #fff; }
+.venue-arrival { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 90px); align-items: center; padding-block: 70px; border-top: 1px solid #343434; }
+.venue-arrival > img { width: 100%; max-height: 620px; object-fit: cover; border-radius: 4px; }
+.venue-arrival h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.1; }
+.venue-arrival p { max-width: 46ch; }
+.venue-arrival .text-link { display: block; width: fit-content; margin-top: 24px; }
+@media (max-width: 700px) { .venue-arrival { grid-template-columns: 1fr; padding-block: 40px; } .venue-arrival > img { max-height: 500px; object-fit: contain; } }
+
+.venue-pause-notice { padding: 18px 20px; margin: 0 0 24px; background: #fff7e5; border-left: 3px solid #ad7b17; border-radius: 6px; }
+.venue-pause-notice[hidden] { display: none; }
+.venue-pause-notice p { margin: 0 0 12px; line-height: 1.5; }
+.venue-pause-notice a { display: inline-block; margin: 0 20px 0 0; padding: 8px 0; text-decoration: underline; }
+#venue-form button[type="submit"]:disabled { opacity: .65; cursor: not-allowed; }
+.booking-section > .venue-pause-notice { max-width: none; }
