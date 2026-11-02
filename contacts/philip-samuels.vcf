@@ -2,6 +2,7 @@ BEGIN:VCARD
 VERSION:3.0
 N:Samuels;Philip;;;
 FN:Philip Samuels
+ORG:Fish n Tingz
 TEL;TYPE=CELL:+18609064009
 URL:https://fishntingz.com/
 END:VCARD
