@@ -75,3 +75,7 @@ Customer requested no past events and omitted the October 16 video note. Custome
 The original `create-pages.py` scaffold is historical; do not rerun it over maintained pages.
 
 The latest hero revision follows the user’s Grubhub composition reference: warm light background, shorter sentence-case headline, a large snapper plate cutout on a solid Fish N Tingz green panel, and direct ordering/menu/reservation links. The Rum Punch Tower message appears immediately below. Asset: `assets/images/snapper-hero-cutout.webp`, derived from the existing red snapper photo with the built-in image-editing tool.
+
+## Bing IndexNow
+
+Canonical URLs and `sitemap.xml` use https://www.fishntingz.com/. Keep `indexnow-key.txt` at the published site root; it verifies URL submissions to Bing IndexNow. Submission confirms receipt, not inclusion in search results.

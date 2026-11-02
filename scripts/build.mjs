@@ -17,6 +17,9 @@ const pages = [
 ];
 for (const file of [
   ...pages,
+  "robots.txt",
+  "sitemap.xml",
+  "indexnow-key.txt",
   "styles.css",
   "site-policies.css",
   "site-policies.js",
