@@ -27,6 +27,7 @@ for (const file of [
   "public-config.js",
 ])
   await copyFile(file, `dist/${file}`);
+await cp("contacts", "dist/contacts", { recursive: true });
 await cp("assets", "dist/assets", {
   recursive: true,
   filter: (src) => !src.endsWith(".jpg") && !src.endsWith(".png"),
