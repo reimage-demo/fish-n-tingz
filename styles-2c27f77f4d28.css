@@ -1825,3 +1825,10 @@ body:has(dialog[open]) {
   .event-announcement-row h3 { font-size: 30px; }
   .event-announcement-row .eyebrow { font-size: 11px; margin-bottom: 8px; }
 }
+
+.event-announcement-row .event-flyer-link { display: block; width: 200px; padding: 0; }
+.event-announcement-row .event-flyer-link img { width: 200px; height: 239px; object-fit: contain; background: white; }
+@media (max-width: 700px) {
+  .event-announcement-row .event-flyer-link { width: 120px; }
+  .event-announcement-row .event-flyer-link img { width: 120px; height: 143px; }
+}
