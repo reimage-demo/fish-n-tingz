@@ -1803,52 +1803,25 @@ body:has(dialog[open]) {
 .reservation-confirmation .reservation-live-status:empty { display: none; }
 .receipt-cashapp-account { display: block; width: fit-content; margin-top: 16px; min-height: 44px; padding-block: 10px; }
 
-/* Event promotion uses the restaurant palette and compact mobile spacing. */
-.legacy-event { color: var(--ink); background: var(--white); border: 1px solid var(--line); border-top: 6px solid var(--green); padding: clamp(24px, 4vw, 48px); }
-.legacy-presenter { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 18px; color: var(--muted); }
-.legacy-kicker { color: var(--red); text-transform: uppercase; letter-spacing: .1em; font-size: 12px; font-weight: 700; margin: 0 0 12px; }
-.legacy-event .legacy-title { font-size: clamp(52px, 8vw, 88px); line-height: .95; letter-spacing: -.02em; margin: 0 0 24px; padding: 0; }
-.legacy-title span { color: var(--red); }
-.legacy-date { font-size: clamp(18px, 2.6vw, 24px); font-weight: 700; line-height: 1.4; margin: 0 0 24px; }
-.legacy-date span { display: block; font-size: 14px; font-weight: 400; color: var(--muted); margin-top: 6px; }
-.legacy-offer { display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid var(--line); padding: 18px 0; gap: 14px; margin-bottom: 24px; }
-.legacy-offer p { margin: 0; }
-.legacy-offer strong { display: block; color: var(--red); font-size: clamp(25px, 4vw, 36px); line-height: 1.1; }
-.legacy-offer span { display: block; margin-top: 7px; font-size: 12px; line-height: 1.45; }
-.legacy-description { max-width: 72ch; color: var(--ink); font-size: 16px; line-height: 1.8; margin: 0 0 24px; }
-.legacy-location { font-size: 13px; line-height: 1.65; color: var(--muted); margin: 0 0 22px; }
-.legacy-event .legacy-cta { background: var(--red); border-color: var(--red); color: var(--white); }
-.legacy-event .legacy-cta:hover { background: #a81019; color: var(--white); }
-.legacy-event a:focus-visible, .event-announcement button:focus-visible { outline: 2px solid var(--deep); outline-offset: 4px; }
-#event-list > .legacy-event { margin-bottom: 32px; scroll-margin-top: 120px; }
-.event-announcement { padding: 0; max-width: 540px; border: 0; background: var(--white); }
-.event-announcement .legacy-event { padding: 44px 28px 28px; }
-.event-announcement .legacy-presenter { padding-right: 22px; }
-.event-announcement .legacy-title { font-size: clamp(52px, 9vw, 76px); }
-.event-announcement .dialog-close { background: var(--white); border-color: var(--line); color: var(--ink); }
-.event-announcement::backdrop { background: #18201699; }
-@media (max-width: 420px) {
-  .event-announcement .legacy-event { padding: 46px 20px 22px; }
-  .legacy-presenter { font-size: 10px; }
-  .legacy-kicker { font-size: 11px; }
-  .legacy-event .legacy-cta { display: flex; justify-content: center; }
-}
-
-.event-announcement .legacy-title { font-size: clamp(44px, 10vw, 64px); margin-bottom: 18px; }
-.event-announcement .legacy-presenter { font-size: 10px; letter-spacing: .08em; margin-bottom: 12px; }
-.event-announcement .legacy-kicker { font-size: 11px; letter-spacing: .06em; }
-.event-announcement .legacy-date { font-size: 19px; margin-bottom: 18px; }
-.event-announcement .legacy-offer { padding: 16px 0; margin-bottom: 18px; }
-.event-announcement .legacy-location { margin-bottom: 18px; }
-@media (max-width: 420px) {
-  .event-announcement .legacy-date { font-size: 17px; }
-  .event-announcement .legacy-date span { font-size: 13px; }
-  .event-announcement .legacy-offer { gap: 10px; }
-  .event-announcement .legacy-offer strong { font-size: 26px; }
-  .event-announcement .legacy-location { font-size: 12px; }
-}
-@media (max-height: 650px) {
-  .event-announcement .legacy-event { padding-top: 46px; padding-bottom: 20px; }
-  .event-announcement .legacy-title { margin-bottom: 12px; }
-  .event-announcement .legacy-date, .event-announcement .legacy-offer, .event-announcement .legacy-location { margin-bottom: 12px; }
+/* Compact event announcement, using the restaurant's shared theme. */
+.event-announcement-row { scroll-margin-top: 120px; }
+.event-date-badge { background: var(--soft); border-top: 4px solid var(--green); width: 200px; padding: 18px; text-align: center; }
+.event-date-badge span { display: block; font-size: 13px; }
+.event-date-badge strong { display: block; font-family: Barlow Condensed, sans-serif; font-size: 48px; line-height: 1.1; color: var(--red); }
+.event-announcement { padding: 0; max-width: 370px; border: 1px solid var(--line); border-top: 4px solid var(--green); background: var(--white); }
+.event-announcement .legacy-event { padding: 28px 24px 24px; background: var(--white); color: var(--ink); }
+.event-announcement .legacy-kicker { color: var(--muted); font-size: 11px; padding-right: 30px; margin: 0 0 10px; }
+.event-announcement h2 { font-size: 36px; line-height: 1.1; margin: 0 0 12px; padding: 0; }
+.event-announcement .legacy-date { font-size: 14px; margin: 0 0 8px; }
+.event-announcement .legacy-summary { font-size: 13px; margin: 0 0 20px; }
+.event-announcement .legacy-summary strong { color: var(--red); }
+.event-announcement .button { font-size: 13px; padding: 11px 20px; min-height: 44px; }
+.event-announcement .dialog-close { top: 6px; right: 6px; background: var(--white); border: 0; color: var(--ink); }
+.event-announcement::backdrop { background: #18201680; }
+@media (max-width: 700px) {
+  .event-announcement-row { grid-template-columns: 1fr; gap: 14px; }
+  .event-announcement-row .event-date-badge { display: none; }
+  .event-announcement-row > .text-link { grid-column: auto; }
+  .event-announcement-row h3 { font-size: 30px; }
+  .event-announcement-row .eyebrow { font-size: 11px; margin-bottom: 8px; }
 }
