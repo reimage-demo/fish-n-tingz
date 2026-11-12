@@ -1832,3 +1832,9 @@ body:has(dialog[open]) {
   .event-announcement-row .event-flyer-link { width: 120px; }
   .event-announcement-row .event-flyer-link img { width: 120px; height: 143px; }
 }
+
+.event-location-first { border-left: 3px solid var(--green); padding: 8px 12px; margin-bottom: 16px; background: var(--soft); }
+.event-announcement-row .event-location-first p { color: var(--ink); font-size: 13px; line-height: 1.5; max-width: none; }
+.event-announcement-row .event-location-first p:first-child { font-weight: 700; }
+.event-detail-list { padding-left: 18px; margin: 8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.event-detail-list li + li { margin-top: 5px; }
