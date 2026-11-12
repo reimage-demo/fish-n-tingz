@@ -1825,3 +1825,17 @@ body:has(dialog[open]) {
   .event-announcement-row h3 { font-size: 30px; }
   .event-announcement-row .eyebrow { font-size: 11px; margin-bottom: 8px; }
 }
+
+/* Venue navigation disclosure retains the main booking link. */
+.nav-venue { position: relative; }
+.nav-venue-heading { display: flex; align-items: center; }
+.nav-venue-toggle { display: inline-flex; align-items: center; justify-content: center; width: 28px; min-height: 44px; padding: 0; border: 0; background: transparent; color: var(--ink); }
+.nav-venue-links { position: absolute; top: 100%; left: -16px; min-width: 220px; padding: 8px; background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--green); box-shadow: 0 8px 18px rgb(24 32 22 / 10%); }
+.site-header nav .nav-venue-links a { display: block; padding: 12px; white-space: nowrap; }
+.site-header nav .nav-venue-links a:hover { background: var(--soft); }
+.nav-venue-toggle:focus-visible, .nav-venue-links a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+@media (max-width: 700px) {
+  .nav-venue-heading { justify-content: space-between; }
+  .nav-venue-toggle { width: 44px; }
+  .nav-venue-links { position: static; min-width: 0; margin: 0 12px 8px; padding: 0 0 0 12px; border: 0; border-left: 2px solid var(--green); box-shadow: none; }
+}
