@@ -1,4 +1,13 @@
+# Public search and AI discovery. Private application paths are not public content.
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /staff
+Disallow: /api/
+Disallow: /convex/
+Disallow: /references/
+Disallow: /.local/
 
 Sitemap: https://www.fishntingz.com/sitemap.xml
+# admin.fishntingz.com is a separate host with its own robots.txt and HTML noindex.
+# Disallow controls crawling, not indexing or access; the staff portal requires login.

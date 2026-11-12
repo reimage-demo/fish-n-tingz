@@ -59,3 +59,8 @@ button:disabled{opacity:.45;cursor:default}
   .arrival-card>svg,.arrival-card small{display:none}
   .arrival-card span{font-size:11px}
 }
+
+/* Keep the partner credit visible in the tour, including fullscreen views. */
+.tour-footer { height: auto; flex-wrap: wrap; column-gap: 15px; row-gap: 0; padding-bottom: max(10px, env(safe-area-inset-bottom, 0px)); }
+.tour-credit { flex: 0 0 100%; margin: 0; text-align: center; color: #cbd0c8; font: 10px/1.7 Arial, Helvetica, sans-serif; }
+.tour-credit a { color: #f7f6f0; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }

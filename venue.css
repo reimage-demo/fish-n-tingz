@@ -116,3 +116,10 @@ body[data-page="venue"] .confirmation-state { color:var(--gold); }
 .venue-arrival p { max-width: 46ch; }
 .venue-arrival .text-link { display: block; width: fit-content; margin-top: 24px; }
 @media (max-width: 700px) { .venue-arrival { grid-template-columns: 1fr; padding-block: 40px; } .venue-arrival > img { max-height: 500px; object-fit: contain; } }
+
+.venue-pause-notice { padding: 18px 20px; margin: 0 0 24px; background: #fff7e5; border-left: 3px solid #ad7b17; border-radius: 6px; }
+.venue-pause-notice[hidden] { display: none; }
+.venue-pause-notice p { margin: 0 0 12px; line-height: 1.5; }
+.venue-pause-notice a { display: inline-block; margin: 0 20px 0 0; padding: 8px 0; text-decoration: underline; }
+#venue-form button[type="submit"]:disabled { opacity: .65; cursor: not-allowed; }
+.booking-section > .venue-pause-notice { max-width: none; }
